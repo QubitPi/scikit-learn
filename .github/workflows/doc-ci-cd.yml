@@ -1,0 +1,36 @@
+# Copyright (c) Jiaqi Liu.
+---
+name: Documentation CI/CD
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+jobs:
+  documentation-ci-cd:
+    name: Documentation CI/CD
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+      - name: Install dependencies
+        run: |
+          pip install sphinx sphinx_gallery sphinx-prompt sphinxext-opengraph
+          pip install scipy pandas seaborn memory_profiler Pillow pooch plotly matplotlib Cython numpy numpydoc scikit-image pytest
+      - name: Install scikit-learn from source
+        run: pip install .
+      - name: Build docs
+        run: make doc
+      - name: Deploy docs to GitHub Pages
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: doc/_build/html/stable
+          user_name: QubitPi
+          user_email: jack20220723@gmail.com
