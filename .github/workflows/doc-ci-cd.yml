@@ -17,12 +17,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.8"
+          python-version: "3.9"
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_gallery sphinx-prompt sphinxext-opengraph
           pip install scipy pandas seaborn memory_profiler Pillow pooch plotly matplotlib Cython numpy numpydoc scikit-image pytest
-      - name: Install binary
+      - name: Install scikit-learn from source
         run: pip install .
       - name: Build docs
         run: make doc
