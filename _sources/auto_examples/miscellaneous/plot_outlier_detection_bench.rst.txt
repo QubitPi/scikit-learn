@@ -289,6 +289,10 @@ of outliers and inliers.
     Computing LOF prediction...
     Computing IForest prediction...
     Loading cardiotocography data
+    /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/sklearn/datasets/_openml.py:100: UserWarning:
+
+    A network error occurred while downloading https://api.openml.org/api/v1/json/data/list/data_name/cardiotocography/limit/2/data_version/1. Retrying...
+
     Computing LOF prediction...
     Computing IForest prediction...
 
@@ -298,7 +302,7 @@ of outliers and inliers.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  37.860 seconds)
+   **Total running time of the script:** ( 0 minutes  51.776 seconds)
 
 
 .. _sphx_glr_download_auto_examples_miscellaneous_plot_outlier_detection_bench.py:

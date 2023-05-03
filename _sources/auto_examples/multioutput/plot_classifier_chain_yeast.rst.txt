@@ -60,8 +60,21 @@ with randomly ordered chains).
    :class: sphx-glr-single-img
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/sklearn/datasets/_openml.py:100: UserWarning:
+
+    A network error occurred while downloading https://api.openml.org/api/v1/json/data/list/data_name/yeast/limit/2/data_version/4. Retrying...
 
 
+
+
+
+
+
+|
 
 .. code-block:: default
 
@@ -147,7 +160,7 @@ with randomly ordered chains).
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.855 seconds)
+   **Total running time of the script:** ( 0 minutes  13.482 seconds)
 
 
 .. _sphx_glr_download_auto_examples_multioutput_plot_classifier_chain_yeast.py:
