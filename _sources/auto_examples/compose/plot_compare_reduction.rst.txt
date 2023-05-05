@@ -122,7 +122,7 @@ Illustration of ``Pipeline`` and ``GridSearchCV``
                                              NMF(max_iter=1000)],
                               &#x27;reduce_dim__n_components&#x27;: [2, 4, 8]},
                              {&#x27;classify__C&#x27;: [1, 10, 100, 1000],
-                              &#x27;reduce_dim&#x27;: [SelectKBest(score_func=&lt;function mutual_info_classif at 0x7f0503818310&gt;)],
+                              &#x27;reduce_dim&#x27;: [SelectKBest(score_func=&lt;function mutual_info_classif at 0x7f4b2d658310&gt;)],
                               &#x27;reduce_dim__k&#x27;: [2, 4, 8]}])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-264" type="checkbox" ><label for="sk-estimator-id-264" class="sk-toggleable__label sk-toggleable__label-arrow">GridSearchCV</label><div class="sk-toggleable__content"><pre>GridSearchCV(estimator=Pipeline(steps=[(&#x27;scaling&#x27;, MinMaxScaler()),
                                            (&#x27;reduce_dim&#x27;, &#x27;passthrough&#x27;),
                                            (&#x27;classify&#x27;,
@@ -134,7 +134,7 @@ Illustration of ``Pipeline`` and ``GridSearchCV``
                                              NMF(max_iter=1000)],
                               &#x27;reduce_dim__n_components&#x27;: [2, 4, 8]},
                              {&#x27;classify__C&#x27;: [1, 10, 100, 1000],
-                              &#x27;reduce_dim&#x27;: [SelectKBest(score_func=&lt;function mutual_info_classif at 0x7f0503818310&gt;)],
+                              &#x27;reduce_dim&#x27;: [SelectKBest(score_func=&lt;function mutual_info_classif at 0x7f4b2d658310&gt;)],
                               &#x27;reduce_dim__k&#x27;: [2, 4, 8]}])</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-265" type="checkbox" ><label for="sk-estimator-id-265" class="sk-toggleable__label sk-toggleable__label-arrow">estimator: Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(steps=[(&#x27;scaling&#x27;, MinMaxScaler()), (&#x27;reduce_dim&#x27;, &#x27;passthrough&#x27;),
                     (&#x27;classify&#x27;, LinearSVC(dual=False, max_iter=10000))])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-266" type="checkbox" ><label for="sk-estimator-id-266" class="sk-toggleable__label sk-toggleable__label-arrow">MinMaxScaler</label><div class="sk-toggleable__content"><pre>MinMaxScaler()</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-267" type="checkbox" ><label for="sk-estimator-id-267" class="sk-toggleable__label sk-toggleable__label-arrow">passthrough</label><div class="sk-toggleable__content"><pre>passthrough</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-268" type="checkbox" ><label for="sk-estimator-id-268" class="sk-toggleable__label sk-toggleable__label-arrow">LinearSVC</label><div class="sk-toggleable__content"><pre>LinearSVC(dual=False, max_iter=10000)</pre></div></div></div></div></div></div></div></div></div></div></div></div>
     </div>
@@ -234,7 +234,7 @@ a transformer is costly.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  50.607 seconds)
+   **Total running time of the script:** ( 1 minutes  1.368 seconds)
 
 
 .. _sphx_glr_download_auto_examples_compose_plot_compare_reduction.py:
