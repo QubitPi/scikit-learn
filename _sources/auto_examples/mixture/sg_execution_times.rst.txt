@@ -6,20 +6,20 @@
 
 Computation times
 =================
-**00:11.154** total execution time for **auto_examples_mixture** files:
+**00:10.103** total execution time for **auto_examples_mixture** files:
 
 +-----------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_mixture_plot_concentration_prior.py` (``plot_concentration_prior.py``) | 00:07.368 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_mixture_plot_concentration_prior.py` (``plot_concentration_prior.py``) | 00:06.032 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_selection.py` (``plot_gmm_selection.py``)             | 00:01.688 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_selection.py` (``plot_gmm_selection.py``)             | 00:02.116 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_init.py` (``plot_gmm_init.py``)                       | 00:00.769 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_init.py` (``plot_gmm_init.py``)                       | 00:00.736 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_sin.py` (``plot_gmm_sin.py``)                         | 00:00.600 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_sin.py` (``plot_gmm_sin.py``)                         | 00:00.501 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_covariances.py` (``plot_gmm_covariances.py``)         | 00:00.284 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_mixture_plot_gmm.py` (``plot_gmm.py``)                                 | 00:00.301 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_mixture_plot_gmm.py` (``plot_gmm.py``)                                 | 00:00.273 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_covariances.py` (``plot_gmm_covariances.py``)         | 00:00.236 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_pdf.py` (``plot_gmm_pdf.py``)                         | 00:00.172 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_mixture_plot_gmm_pdf.py` (``plot_gmm_pdf.py``)                         | 00:00.181 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------+-----------+--------+

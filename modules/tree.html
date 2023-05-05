@@ -589,10 +589,6 @@ to the example’s value for this attribute). The entire process is then repeate
 with each descendant node to select the best attribute to test at that point in the tree. This forms a greedy search
 for an acceptable decision tree, in which the algorithm never backtracks to reconsider earlier choices. A simplified
 version of the algorithm, specialized to learning boolean-valued functions (i.e., concept learning), is described below</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>ID3(examples, targe_tattribute, attributes) <span class="math notranslate nohighlight">\(\rightarrow\)</span> a decision tree that correctly
-classifies the given “examples”</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concept</p></th>
@@ -609,6 +605,10 @@ a list of other attributes that may be tested by the learned decision tree</p></
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ID3(examples, targe_tattribute, attributes) <span class="math notranslate nohighlight">\(\rightarrow\)</span> a decision tree that correctly
+classifies the given “examples”</p>
 <ul>
 <li><p>Create a Root node for the tree</p></li>
 <li><p>If all “examples” are positive, return the single-node tree Root, with label = <code class="docutils literal notranslate"><span class="pre">+</span></code></p></li>

@@ -476,7 +476,7 @@ single-variable partial dependence plots.
  .. code-block:: none
 
     Training MLPRegressor...
-    done in 0.825s
+    done in 0.646s
     Test R2 score: 0.61
 
 
@@ -559,7 +559,7 @@ We will plot the averaged partial dependence.
  .. code-block:: none
 
     Computing partial dependence plots...
-    done in 0.674s
+    done in 0.585s
 
 
 
@@ -602,7 +602,7 @@ specific preprocessor we created for this model.
  .. code-block:: none
 
     Training HistGradientBoostingRegressor...
-    done in 0.176s
+    done in 0.150s
     Test R2 score: 0.62
 
 
@@ -659,7 +659,7 @@ features.
  .. code-block:: none
 
     Computing partial dependence plots...
-    done in 1.289s
+    done in 1.079s
 
 
 
@@ -734,7 +734,7 @@ selected ICEs for the temperature and humidity features.
  .. code-block:: none
 
     Computing partial dependence plots and individual conditional expectation...
-    done in 0.535s
+    done in 0.444s
 
 
 
@@ -855,7 +855,7 @@ heatmap.
  .. code-block:: none
 
     Computing partial dependence plots...
-    done in 8.756s
+    done in 7.130s
 
 
 
@@ -916,7 +916,7 @@ non-linear feature interactions.
  .. code-block:: none
 
     Computing partial dependence plots...
-    done in 7.498s
+    done in 6.210s
 
 
 
@@ -984,7 +984,7 @@ the season, the weather, and the target would be as follow:
  .. code-block:: none
 
     Computing partial dependence plots...
-    done in 0.402s
+    done in 0.329s
 
 
 
@@ -1047,7 +1047,7 @@ this time in 3 dimensions.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  25.759 seconds)
+   **Total running time of the script:** ( 0 minutes  21.267 seconds)
 
 
 .. _sphx_glr_download_auto_examples_inspection_plot_partial_dependence.py:

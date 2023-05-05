@@ -264,7 +264,7 @@ fitting of a transformer is costly.</p>
                                          NMF(max_iter=1000)],
                           &#x27;reduce_dim__n_components&#x27;: [2, 4, 8]},
                          {&#x27;classify__C&#x27;: [1, 10, 100, 1000],
-                          &#x27;reduce_dim&#x27;: [SelectKBest(score_func=&lt;function mutual_info_classif at 0x7fc033858310&gt;)],
+                          &#x27;reduce_dim&#x27;: [SelectKBest(score_func=&lt;function mutual_info_classif at 0x7f3b83eab310&gt;)],
                           &#x27;reduce_dim__k&#x27;: [2, 4, 8]}])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-264" type="checkbox" ><label for="sk-estimator-id-264" class="sk-toggleable__label sk-toggleable__label-arrow">GridSearchCV</label><div class="sk-toggleable__content"><pre>GridSearchCV(estimator=Pipeline(steps=[(&#x27;scaling&#x27;, MinMaxScaler()),
                                        (&#x27;reduce_dim&#x27;, &#x27;passthrough&#x27;),
                                        (&#x27;classify&#x27;,
@@ -276,7 +276,7 @@ fitting of a transformer is costly.</p>
                                          NMF(max_iter=1000)],
                           &#x27;reduce_dim__n_components&#x27;: [2, 4, 8]},
                          {&#x27;classify__C&#x27;: [1, 10, 100, 1000],
-                          &#x27;reduce_dim&#x27;: [SelectKBest(score_func=&lt;function mutual_info_classif at 0x7fc033858310&gt;)],
+                          &#x27;reduce_dim&#x27;: [SelectKBest(score_func=&lt;function mutual_info_classif at 0x7f3b83eab310&gt;)],
                           &#x27;reduce_dim__k&#x27;: [2, 4, 8]}])</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-265" type="checkbox" ><label for="sk-estimator-id-265" class="sk-toggleable__label sk-toggleable__label-arrow">estimator: Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(steps=[(&#x27;scaling&#x27;, MinMaxScaler()), (&#x27;reduce_dim&#x27;, &#x27;passthrough&#x27;),
                 (&#x27;classify&#x27;, LinearSVC(dual=False, max_iter=10000))])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-266" type="checkbox" ><label for="sk-estimator-id-266" class="sk-toggleable__label sk-toggleable__label-arrow">MinMaxScaler</label><div class="sk-toggleable__content"><pre>MinMaxScaler()</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-267" type="checkbox" ><label for="sk-estimator-id-267" class="sk-toggleable__label sk-toggleable__label-arrow">passthrough</label><div class="sk-toggleable__content"><pre>passthrough</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-268" type="checkbox" ><label for="sk-estimator-id-268" class="sk-toggleable__label sk-toggleable__label-arrow">LinearSVC</label><div class="sk-toggleable__content"><pre>LinearSVC(dual=False, max_iter=10000)</pre></div></div></div></div></div></div></div></div></div></div></div></div>
 </div>
@@ -343,7 +343,7 @@ other configurations of <code class="docutils literal notranslate"><span class="
 estimator data, leading to save processing time. Therefore, the use of
 caching the pipeline using <code class="docutils literal notranslate"><span class="pre">memory</span></code> is highly beneficial when fitting
 a transformer is costly.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  3.804 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  52.323 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-compose-plot-compare-reduction-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/scikit-learn/scikit-learn/main?urlpath=lab/tree/notebooks/auto_examples/compose/plot_compare_reduction.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo5.svg" width="150px" /></a>
