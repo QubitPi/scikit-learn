@@ -220,7 +220,7 @@ We perform AgglomerativeClustering again with connectivity constraints.
  .. code-block:: none
 
     Compute structured hierarchical clustering...
-    Elapsed time: 0.06s
+    Elapsed time: 0.07s
     Number of points: 1500
 
 
@@ -257,7 +257,7 @@ Plotting the structured hierarchical clusters.
 
 
 .. image-sg:: /auto_examples/cluster/images/sphx_glr_plot_ward_structured_vs_unstructured_002.png
-   :alt: With connectivity constraints (time 0.06s)
+   :alt: With connectivity constraints (time 0.07s)
    :srcset: /auto_examples/cluster/images/sphx_glr_plot_ward_structured_vs_unstructured_002.png
    :class: sphx-glr-single-img
 
@@ -268,7 +268,7 @@ Plotting the structured hierarchical clusters.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.397 seconds)
+   **Total running time of the script:** ( 0 minutes  0.449 seconds)
 
 
 .. _sphx_glr_download_auto_examples_cluster_plot_ward_structured_vs_unstructured.py:

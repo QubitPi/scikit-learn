@@ -462,18 +462,16 @@ version of the algorithm, specialized to learning boolean-valued functions (i.e.
   - Create a Root node for the tree
   - If all "examples" are positive, return the single-node tree Root, with label = ``+``
   - If all "examples" are negative, return the single-node tree Root, with label = ``-``
-  - If "attributes" is empty, return the single-node tree Root, with label = most common value of "target_attribute" in
-  - "examples"
+  - If "attributes" is empty, return the single-node tree Root, with label = most common value of "target_attribute" in "examples"
   - Otherwise begin
-     1. :math:`\mathit{A}` :math:`\leftarrow` attribute from "attributes" that best* classifies "examples"
-     2. The decision attribute for Root :math:`\leftarrow` :math:`\mathit{A}`
-     3. For each possible value, :math:`\mathit{v_i}`, of :math:`\mathit{A}`,
-        - Add a new tree branch below Root, corresponding to the test :math:`\mathit{A}` = :math:`v_i`
-        - Let :math:`examples_{\mathit{v_i}}` be the subset of "examples" that have value :math:`\mathit{v_i}` for :math:`\mathit{A}`
-        - If :math:`examples_{\mathit{v_i}}` is empty
-          - then below this new branch add a leaf node with label = most common value of "targe_tattribute" attribute in "examples"
-          - else below this new branch add the subtree
-            ID3(:math:`examples_{\mathit{v_i}}`, "targe_tattribute", "attributes" - :math:`{\mathit{A}}`)
+    1. :math:`\mathit{A}` :math:`\leftarrow` attribute from "attributes" that best* classifies "examples"
+    2. The decision attribute for Root :math:`\leftarrow` :math:`\mathit{A}`
+    3. For each possible value, :math:`\mathit{v_i}`, of :math:`\mathit{A}`,
+       a. Add a new tree branch below Root, corresponding to the test :math:`\mathit{A}` = :math:`v_i`
+       b. Let :math:`examples_{\mathit{v_i}}` be the subset of "examples" that have value :math:`\mathit{v_i}` for :math:`\mathit{A}`
+       c. If :math:`examples_{\mathit{v_i}}` is empty
+         - then below this new branch add a leaf node with label = most common value of "targe_tattribute" attribute in "examples"
+         - else below this new branch add the subtree ID3(:math:`examples_{\mathit{v_i}}`, "targe_tattribute", "attributes" - :math:`{\mathit{A}}`)
   - End
   - Return Root
 
