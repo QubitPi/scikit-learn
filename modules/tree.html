@@ -589,26 +589,29 @@ to the example’s value for this attribute). The entire process is then repeate
 with each descendant node to select the best attribute to test at that point in the tree. This forms a greedy search
 for an acceptable decision tree, in which the algorithm never backtracks to reconsider earlier choices. A simplified
 version of the algorithm, specialized to learning boolean-valued functions (i.e., concept learning), is described below</p>
-<table class="docutils align-default">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ID3(examples, targe_tattribute, attributes) <span class="math notranslate nohighlight">\(\rightarrow\)</span> a decision tree that correctly
+classifies the given “examples”</p>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Title</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Concept</p></th>
 <th class="head"><p>Definition</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>“examples”
-“targe_tattribute”
-“attributes”</p></td>
-<td><p>the training examples
-the attribute whose value is to be predicted by the tree
-a list of other attributes that may be tested by the learned decision tree</p></td>
+<tr class="row-even"><td><p>“examples”</p></td>
+<td><p>the training examples</p></td>
+</tr>
+<tr class="row-odd"><td><p>“targe_tattribute”</p></td>
+<td><p>the attribute whose value is to be predicted by the tree</p></td>
+</tr>
+<tr class="row-even"><td><p>“attributes”</p></td>
+<td><p>a list of other attributes that may be tested by the learned decision tree</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>ID3(examples, targe_tattribute, attributes) <span class="math notranslate nohighlight">\(\rightarrow\)</span> a decision tree that correctly
-classifies the given “examples”</p>
 <ul>
 <li><p>Create a Root node for the tree</p></li>
 <li><p>If all “examples” are positive, return the single-node tree Root, with label = <code class="docutils literal notranslate"><span class="pre">+</span></code></p></li>
