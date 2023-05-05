@@ -178,7 +178,21 @@
 <li><a class="reference internal" href="#multi-output-problems">1.10.3. Multi-output problems</a></li>
 <li><a class="reference internal" href="#complexity">1.10.4. Complexity</a></li>
 <li><a class="reference internal" href="#tips-on-practical-use">1.10.5. Tips on practical use</a></li>
-<li><a class="reference internal" href="#tree-algorithms-id3-c4-5-c5-0-and-cart">1.10.6. Tree algorithms: ID3, C4.5, C5.0 and CART</a></li>
+<li><a class="reference internal" href="#tree-algorithms-id3-c4-5-c5-0-and-cart">1.10.6. Tree algorithms: ID3, C4.5, C5.0 and CART</a><ul>
+<li><a class="reference internal" href="#id3-algorithm">1.10.6.1. ID3 Algorithm</a><ul>
+<li><a class="reference internal" href="#which-attribute-is-the-best-classifier">1.10.6.1.1. Which Attribute Is the Best Classifier?</a></li>
+<li><a class="reference internal" href="#entropy-measures-homogeneity-of-examples">1.10.6.1.2. Entropy Measures Homogeneity of Examples</a></li>
+<li><a class="reference internal" href="#hypothesis-space-search-in-decision-tree-learning">1.10.6.1.3. Hypothesis Space Search in Decision Tree Learning</a></li>
+<li><a class="reference internal" href="#inductive-bias-in-decision-tree-learning">1.10.6.1.4. Inductive Bias in Decision Tree Learning</a></li>
+<li><a class="reference internal" href="#issues-in-decision-tree-learning">1.10.6.1.5. Issues in Decision Tree Learning</a><ul>
+<li><a class="reference internal" href="#avoiding-overfitting-the-data">1.10.6.1.5.1. Avoiding Overfitting the Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-algorithms">1.10.6.2. Other Algorithms</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#mathematical-formulation">1.10.7. Mathematical formulation</a><ul>
 <li><a class="reference internal" href="#classification-criteria">1.10.7.1. Classification criteria</a></li>
 <li><a class="reference internal" href="#regression-criteria">1.10.7.2. Regression criteria</a></li>
@@ -317,7 +331,8 @@ labels are [-1, 1]) classification and multiclass (where the labels are
 exporter. If you use the <a class="reference external" href="https://conda.io">conda</a> package manager, the graphviz binaries
 and the python package can be installed with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">python-graphviz</span></code>.</p>
 <p>Alternatively binaries for graphviz can be downloaded from the graphviz project homepage,
-and the Python wrapper installed from pypi with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">graphviz</span></code>.</p>
+and the Python wrapper installed from pypi with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">graphviz</span></code>. On Mac, we can also install via
+Homebrew with <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">Graphviz</span></code>.</p>
 <p>Below is an example graphviz export of the above tree trained on the entire
 iris dataset; the results are saved in an output file <code class="docutils literal notranslate"><span class="pre">iris.pdf</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">graphviz</span> 
@@ -344,6 +359,29 @@ render these plots inline automatically:</p>
 <figure class="align-center">
 <a class="reference external image-reference" href="../auto_examples/tree/plot_iris_dtc.html"><img alt="../_images/sphx_glr_plot_iris_dtc_001.png" src="../_images/sphx_glr_plot_iris_dtc_001.png" style="width: 480.0px; height: 360.0px;" /></a>
 </figure>
+<p>The complete code snippet using the [Iris dataset](<a class="reference external" href="https://en.wikipedia.org/wiki/Iris_flower_data_set">https://en.wikipedia.org/wiki/Iris_flower_data_set</a>) is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+<span class="n">classifier</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">classifier</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span>
+   <span class="n">classifier</span><span class="p">,</span>
+   <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+   <span class="n">feature_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span>
+   <span class="n">class_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">,</span>
+   <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+   <span class="n">rounded</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+   <span class="n">special_characters</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;iris&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Alternatively, the tree can also be exported in textual format with the
 function <a class="reference internal" href="generated/sklearn.tree.export_text.html#sklearn.tree.export_text" title="sklearn.tree.export_text"><code class="xref py py-func docutils literal notranslate"><span class="pre">export_text</span></code></a>. This method doesn’t require the installation
 of external libraries and is more compact:</p>
@@ -534,12 +572,163 @@ most of the samples.</p></li>
 <span id="tree-algorithms"></span><h2><span class="section-number">1.10.6. </span>Tree algorithms: ID3, C4.5, C5.0 and CART<a class="headerlink" href="#tree-algorithms-id3-c4-5-c5-0-and-cart" title="Permalink to this heading">¶</a></h2>
 <p>What are all the various decision tree algorithms and how do they differ
 from each other? Which one is implemented in scikit-learn?</p>
+<section id="id3-algorithm">
+<h3><span class="section-number">1.10.6.1. </span>ID3 Algorithm<a class="headerlink" href="#id3-algorithm" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/ID3_algorithm">ID3</a> (Iterative Dichotomiser 3) was developed in 1986 by Ross Quinlan.
 The algorithm creates a multiway tree, finding for each node (i.e. in
 a greedy manner) the categorical feature that will yield the largest
 information gain for categorical targets. Trees are grown to their
 maximum size and then a pruning step is usually applied to improve the
 ability of the tree to generalize to unseen data.</p>
+<p>ID3 algorithm learns decision trees by constructing them topdown, beginning with the question “which attribute should
+be tested at the root of the tree?” To answer this question, each instance attribute is evaluated using a statistical
+test to determine how well it alone classifies the training examples. The best attribute is selected and used as the
+test at the root node of the tree. A descendant of the root node is then created for each possible value of this
+attribute, and the training examples are sorted to the appropriate descendant node (i.e., down the branch corresponding
+to the example’s value for this attribute). The entire process is then repeated using the training examples associated
+with each descendant node to select the best attribute to test at that point in the tree. This forms a greedy search
+for an acceptable decision tree, in which the algorithm never backtracks to reconsider earlier choices. A simplified
+version of the algorithm, specialized to learning boolean-valued functions (i.e., concept learning), is described below</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ID3(examples, targe_tattribute, attributes) <span class="math notranslate nohighlight">\(\rightarrow\)</span> a decision tree that correctly classifies the given
+“examples”</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept</p></th>
+<th class="head"><p>Definition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>“examples”
+“targe_tattribute”
+“attributes”</p></td>
+<td><p>the training examples
+the attribute whose value is to be predicted by the tree
+a list of other attributes that may be tested by the learned decision tree</p></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Create a Root node for the tree</p></li>
+<li><p>If all “examples” are positive, return the single-node tree Root, with label = <code class="docutils literal notranslate"><span class="pre">+</span></code></p></li>
+<li><p>If all “examples” are negative, return the single-node tree Root, with label = <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
+<li><p>If “attributes” is empty, return the single-node tree Root, with label = most common value of “target_attribute” in</p></li>
+<li><p>“examples”</p></li>
+<li><dl>
+<dt>Otherwise begin</dt><dd><ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(\mathit{A}\)</span> <span class="math notranslate nohighlight">\(\leftarrow\)</span> attribute from “attributes” that best* classifies “examples”</p></li>
+<li><p>The decision attribute for Root <span class="math notranslate nohighlight">\(\leftarrow\)</span> <span class="math notranslate nohighlight">\(\mathit{A}\)</span></p></li>
+<li><p>For each possible value, <span class="math notranslate nohighlight">\(\mathit{v_i}\)</span>, of <span class="math notranslate nohighlight">\(\mathit{A}\)</span>,
+* Add a new tree branch below Root, corresponding to the test <span class="math notranslate nohighlight">\(\mathit{A}\)</span> = <span class="math notranslate nohighlight">\(v_i\)</span>
+* Let <span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span> be the subset of “examples” that have value <span class="math notranslate nohighlight">\(\mathit{v_i}\)</span> for</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\mathit{A}\)</span></p>
+</div></blockquote>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span> is empty
+- then below this new branch add a leaf node with label = most common value of “targe_tattribute” attribute in</p>
+<blockquote>
+<div><p>“examples”</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>else below this new branch add the subtree
+ID3(<span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span>, “targe_tattribute”, “attributes” - <span class="math notranslate nohighlight">\({\mathit{A}}\)</span>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>End</p></li>
+<li><p>Return Root</p></li>
+</ul>
+</div>
+<p>The best attribute is the one with the highest <a class="reference internal" href="#which-attribute-is-the-best-classifier"><span class="std std-ref">information gain</span></a></p>
+<section id="which-attribute-is-the-best-classifier">
+<span id="id1"></span><h4><span class="section-number">1.10.6.1.1. </span>Which Attribute Is the Best Classifier?<a class="headerlink" href="#which-attribute-is-the-best-classifier" title="Permalink to this heading">¶</a></h4>
+<p>We will define a statistical property, called <strong>Information Gain</strong>, that measures how well a given attribute separates
+the training examples according to their target classification. ID3 uses this information gain measure to select among
+the candidate attributes at each step while growing the tree</p>
+</section>
+<section id="entropy-measures-homogeneity-of-examples">
+<h4><span class="section-number">1.10.6.1.2. </span>Entropy Measures Homogeneity of Examples<a class="headerlink" href="#entropy-measures-homogeneity-of-examples" title="Permalink to this heading">¶</a></h4>
+<p>In information theory, <strong>Entropy</strong> characterizes the (im)purity of an arbitrary collection of examples. Given a
+collection <span class="math notranslate nohighlight">\(\mathit{S}\)</span>, containing positive and negative examples of some target concept, the entropy of S
+relative to this boolean classification is</p>
+<div class="math notranslate nohighlight">
+\[Entropy(\mathit{S}) \equiv \mathit{-p_\oplus \log_2 p_\oplus - p_\ominus \log_2 p_\ominus}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathit{p_\oplus}\)</span>, is the proportion of positive examples in <span class="math notranslate nohighlight">\(\mathit{S}\)</span> and
+<span class="math notranslate nohighlight">\(\mathit{p_\ominus}\)</span> the proportion of negative examples in <span class="math notranslate nohighlight">\(\mathit{S}\)</span></p>
+<p>If the target attribute can take on <span class="math notranslate nohighlight">\(\mathit{c}\)</span> different values, then the entropy of <span class="math notranslate nohighlight">\(\mathit{S}\)</span>
+relative to this c-wise classification is defined as</p>
+<div class="math notranslate nohighlight">
+\[Entropy(\mathit{S}) \equiv \mathit{\sum_{i = 1}^{c} -p_i \log_2 p_i}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathit{p_i}\)</span> is the proportion of <span class="math notranslate nohighlight">\(\mathit{S}\)</span> belonging to class <span class="math notranslate nohighlight">\(\mathit{i}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The logarithm is still base 2 because entropy is a measure of the expected encoding length measured in bits. If the
+target attribute can take on <span class="math notranslate nohighlight">\(\mathit{c}\)</span> possible values, the entropy can be as large as
+<span class="math notranslate nohighlight">\(\mathit{\log_2 c}\)</span>.</p>
+<p><strong>INFORMATION GAIN MEASURES THE EXPECTED REDUCTION IN ENTROPY</strong></p>
+</div>
+</section>
+<section id="hypothesis-space-search-in-decision-tree-learning">
+<h4><span class="section-number">1.10.6.1.3. </span>Hypothesis Space Search in Decision Tree Learning<a class="headerlink" href="#hypothesis-space-search-in-decision-tree-learning" title="Permalink to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>ID3’s hypothesis space of all decision trees is a complete space of finite discrete-valued functions, relative to the
+available attributes.</p></li>
+<li><p>ID3 maintains only a single current hypothesis</p></li>
+</ul>
+</section>
+<section id="inductive-bias-in-decision-tree-learning">
+<h4><span class="section-number">1.10.6.1.4. </span>Inductive Bias in Decision Tree Learning<a class="headerlink" href="#inductive-bias-in-decision-tree-learning" title="Permalink to this heading">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Inductive bias is the set of assumptions that, together with the training data, deductively justify the
+classifications assigned by the learner to future instances</p>
+</div>
+<p><strong>Approximate inductive bias of ID3</strong>: _Shorter trees are preferred over larger <a href="#id5"><span class="problematic" id="id6">trees_</span></a>. Trees that place high
+information gain attributes close to the root are preferred over those that do not.</p>
+</section>
+<section id="issues-in-decision-tree-learning">
+<h4><span class="section-number">1.10.6.1.5. </span>Issues in Decision Tree Learning<a class="headerlink" href="#issues-in-decision-tree-learning" title="Permalink to this heading">¶</a></h4>
+<section id="avoiding-overfitting-the-data">
+<h5><span class="section-number">1.10.6.1.5.1. </span>Avoiding Overfitting the Data<a class="headerlink" href="#avoiding-overfitting-the-data" title="Permalink to this heading">¶</a></h5>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given a hypothesis space <span class="math notranslate nohighlight">\(\mathit{H}\)</span>, a hypothesis <span class="math notranslate nohighlight">\(\mathit{h \in H}\)</span> is said to <strong>overfit</strong> the
+training data if there exists some alternative hypothesis <span class="math notranslate nohighlight">\(\mathit{h' \in H}\)</span>, such that <span class="math notranslate nohighlight">\(\mathit{h}\)</span> has
+smaller error than <span class="math notranslate nohighlight">\(\mathit{h'}\)</span> over the training examples, but <span class="math notranslate nohighlight">\(\mathit{h'}\)</span> has a smaller error than
+<span class="math notranslate nohighlight">\(\mathit{h}\)</span> over the entire distribution of instances.</p>
+</div>
+<p>Overfitting is a significant practical difficulty for decision tree learning and many other learning methods. There are
+several approaches to avoiding overfitting in decision tree learning. These can be grouped into two classes</p>
+<ol class="arabic simple">
+<li><p>approaches that stop growing the tree earlier, before it reaches the point where it perfectly classifies the training
+data</p></li>
+<li><p>approaches that allow the tree to overfit the data, and then post-prune the tree</p></li>
+</ol>
+<p>Although the first of these approaches might seem.more direct, the second approach of post-pruning overfit trees has
+been found to be more successful in practice. This is due to the difficulty in the first approach of estimating
+precisely when to stop growing the tree. What criterion is to be used to determine the correct final tree size then?</p>
+<p>Approaches include:</p>
+<ol class="arabic simple">
+<li><p>Use a separate set of examples, distinct from the training examples, to evaluate the utility of post-pruning nodes
+from the tree (<strong>training and validation set</strong> approach).</p></li>
+<li><p>Use all the available data for training, but apply a statistical test to estimate whether expanding (or pruning) a
+particular node is likely to produce an improvement beyond the training set.</p></li>
+<li><p>Use an explicit measure of the complexity for encoding the training examples and the decision tree, halting growth of
+the tree when this encoding size is minimized. This approach is based on a heuristic called the <strong>Minimum Description
+Length principle</strong></p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="other-algorithms">
+<h3><span class="section-number">1.10.6.2. </span>Other Algorithms<a class="headerlink" href="#other-algorithms" title="Permalink to this heading">¶</a></h3>
 <p>C4.5 is the successor to ID3 and removed the restriction that features
 must be categorical by dynamically defining a discrete attribute (based
 on numerical variables) that partitions the continuous attribute value
@@ -557,6 +746,7 @@ does not compute rule sets. CART constructs binary trees using the feature
 and threshold that yield the largest information gain at each node.</p>
 <p>scikit-learn uses an optimized version of the CART algorithm; however, the
 scikit-learn implementation does not support categorical variables for now.</p>
+</section>
 </section>
 <section id="mathematical-formulation">
 <span id="tree-mathematical-formulation"></span><h2><span class="section-number">1.10.7. </span>Mathematical formulation<a class="headerlink" href="#mathematical-formulation" title="Permalink to this heading">¶</a></h2>
@@ -647,9 +837,9 @@ the MSE criterion.</p>
 </section>
 </section>
 <section id="minimal-cost-complexity-pruning">
-<span id="id1"></span><h2><span class="section-number">1.10.8. </span>Minimal Cost-Complexity Pruning<a class="headerlink" href="#minimal-cost-complexity-pruning" title="Permalink to this heading">¶</a></h2>
+<span id="id2"></span><h2><span class="section-number">1.10.8. </span>Minimal Cost-Complexity Pruning<a class="headerlink" href="#minimal-cost-complexity-pruning" title="Permalink to this heading">¶</a></h2>
 <p>Minimal cost-complexity pruning is an algorithm used to prune a tree to avoid
-over-fitting, described in Chapter 3 of <a class="reference internal" href="#bre" id="id2"><span>[BRE]</span></a>. This algorithm is parameterized
+over-fitting, described in Chapter 3 of <a class="reference internal" href="#bre" id="id4"><span>[BRE]</span></a>. This algorithm is parameterized
 by <span class="math notranslate nohighlight">\(\alpha\ge0\)</span> known as the complexity parameter. The complexity
 parameter is used to define the cost-complexity measure, <span class="math notranslate nohighlight">\(R_\alpha(T)\)</span> of
 a given tree <span class="math notranslate nohighlight">\(T\)</span>:</p>
@@ -683,7 +873,7 @@ be pruned. This process stops when the pruned tree’s minimal
 <p class="topic-title">References:</p>
 <div role="list" class="citation-list">
 <div class="citation" id="bre" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">BRE</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">BRE</a><span class="fn-bracket">]</span></span>
 <p>L. Breiman, J. Friedman, R. Olshen, and C. Stone. Classification
 and Regression Trees. Wadsworth, Belmont, CA, 1984.</p>
 </div>

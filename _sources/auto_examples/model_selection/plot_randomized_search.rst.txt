@@ -46,7 +46,7 @@ simultaneously using grid search, but pick only the ones deemed most important.
 
  .. code-block:: none
 
-    RandomizedSearchCV took 1.54 seconds for 15 candidates parameter settings.
+    RandomizedSearchCV took 1.34 seconds for 15 candidates parameter settings.
     Model with rank: 1
     Mean validation score: 0.993 (std: 0.007)
     Parameters: {'alpha': 0.01761326452827255, 'average': False, 'l1_ratio': 0.14458295175799263}
@@ -57,16 +57,16 @@ simultaneously using grid search, but pick only the ones deemed most important.
 
     Model with rank: 3
     Mean validation score: 0.980 (std: 0.011)
-    Parameters: {'alpha': 0.016727019407645892, 'average': True, 'l1_ratio': 0.5720620992012775}
+    Parameters: {'alpha': 0.01672701940764589, 'average': True, 'l1_ratio': 0.5720620992012775}
 
-    GridSearchCV took 4.32 seconds for 60 candidate parameter settings.
+    GridSearchCV took 3.69 seconds for 60 candidate parameter settings.
     Model with rank: 1
     Mean validation score: 0.996 (std: 0.005)
     Parameters: {'alpha': 0.01, 'average': False, 'l1_ratio': 0.6666666666666666}
 
     Model with rank: 2
     Mean validation score: 0.993 (std: 0.009)
-    Parameters: {'alpha': 0.1, 'average': False, 'l1_ratio': 0.2222222222222222}
+    Parameters: {'alpha': 0.09999999999999999, 'average': False, 'l1_ratio': 0.2222222222222222}
 
     Model with rank: 3
     Mean validation score: 0.993 (std: 0.007)
@@ -157,7 +157,7 @@ simultaneously using grid search, but pick only the ones deemed most important.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.878 seconds)
+   **Total running time of the script:** ( 0 minutes  5.043 seconds)
 
 
 .. _sphx_glr_download_auto_examples_model_selection_plot_randomized_search.py:

@@ -65,14 +65,14 @@ which is well known to have this percolation instability.
     *
 
       .. image-sg:: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_003.png
-         :alt: n_cluster=30, connectivity=True, linkage=average (time 0.14s), linkage=complete (time 0.14s), linkage=ward (time 0.23s), linkage=single (time 0.03s)
+         :alt: n_cluster=30, connectivity=True, linkage=average (time 0.11s), linkage=complete (time 0.11s), linkage=ward (time 0.15s), linkage=single (time 0.02s)
          :srcset: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_003.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_004.png
-         :alt: n_cluster=3, connectivity=True, linkage=average (time 0.15s), linkage=complete (time 0.15s), linkage=ward (time 0.20s), linkage=single (time 0.03s)
+         :alt: n_cluster=3, connectivity=True, linkage=average (time 0.11s), linkage=complete (time 0.12s), linkage=ward (time 0.15s), linkage=single (time 0.02s)
          :srcset: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_004.png
          :class: sphx-glr-multi-img
 
@@ -144,7 +144,7 @@ which is well known to have this percolation instability.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.728 seconds)
+   **Total running time of the script:** ( 0 minutes  2.142 seconds)
 
 
 .. _sphx_glr_download_auto_examples_cluster_plot_agglomerative_clustering.py:

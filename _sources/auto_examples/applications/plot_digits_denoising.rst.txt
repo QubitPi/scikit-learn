@@ -78,19 +78,6 @@ normalize the dataset such that all pixel values are in the range (0, 1).
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/sklearn/datasets/_openml.py:65: RuntimeWarning:
-
-    Invalid cache, redownloading file
-
-    /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/sklearn/datasets/_openml.py:100: UserWarning:
-
-    A network error occurred while downloading https://api.openml.org/data/v1/download/19329737. Retrying...
-
-
 
 
 
@@ -324,7 +311,7 @@ will depend of the parameters `n_components`, `gamma`, and `alpha`.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  27.267 seconds)
+   **Total running time of the script:** ( 0 minutes  15.740 seconds)
 
 
 .. _sphx_glr_download_auto_examples_applications_plot_digits_denoising.py:

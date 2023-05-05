@@ -228,15 +228,6 @@ normalize the dataset such that all pixel values are in the range (0, 1).</p>
 <span class="n">X</span> <span class="o">=</span> <a href="../../modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler" title="sklearn.preprocessing.MinMaxScaler" class="sphx-glr-backref-module-sklearn-preprocessing sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">MinMaxScaler</span></a><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/sklearn/datasets/_openml.py:65: RuntimeWarning:
-
-Invalid cache, redownloading file
-
-/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/sklearn/datasets/_openml.py:100: UserWarning:
-
-A network error occurred while downloading https://api.openml.org/data/v1/download/19329737. Retrying...
-</pre></div>
-</div>
 <p>The idea will be to learn a PCA basis (with and without a kernel) on
 noisy images and then use these models to reconstruct and denoise these
 images.</p>
@@ -349,7 +340,7 @@ not favor PCA instead of kernel PCA. We observe that kernel PCA is able to
 remove background noise and provide a smoother image.</p>
 <p>However, it should be noted that the results of the denoising with kernel PCA
 will depend of the parameters <code class="docutils literal notranslate"><span class="pre">n_components</span></code>, <code class="docutils literal notranslate"><span class="pre">gamma</span></code>, and <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  27.267 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  15.740 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-applications-plot-digits-denoising-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/scikit-learn/scikit-learn/main?urlpath=lab/tree/notebooks/auto_examples/applications/plot_digits_denoising.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>

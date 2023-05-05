@@ -6,10 +6,10 @@
 
 Computation times
 =================
-**00:01.120** total execution time for **auto_examples_cross_decomposition** files:
+**00:00.793** total execution time for **auto_examples_cross_decomposition** files:
 
 +---------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_cross_decomposition_plot_pcr_vs_pls.py` (``plot_pcr_vs_pls.py``)                                   | 00:00.766 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_cross_decomposition_plot_pcr_vs_pls.py` (``plot_pcr_vs_pls.py``)                                   | 00:00.533 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_cross_decomposition_plot_compare_cross_decomposition.py` (``plot_compare_cross_decomposition.py``) | 00:00.354 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_cross_decomposition_plot_compare_cross_decomposition.py` (``plot_compare_cross_decomposition.py``) | 00:00.261 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------+-----------+--------+

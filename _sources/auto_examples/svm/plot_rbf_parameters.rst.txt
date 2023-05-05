@@ -234,7 +234,7 @@ tuning can be achieved but at a much higher cost.
 
  .. code-block:: none
 
-    The best parameters are {'C': 1.0, 'gamma': 0.1} with a score of 0.97
+    The best parameters are {'C': 1.0, 'gamma': 0.09999999999999999} with a score of 0.97
 
 
 
@@ -357,7 +357,7 @@ the same color.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.849 seconds)
+   **Total running time of the script:** ( 0 minutes  5.459 seconds)
 
 
 .. _sphx_glr_download_auto_examples_svm_plot_rbf_parameters.py:
