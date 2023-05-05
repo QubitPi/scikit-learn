@@ -804,51 +804,51 @@ regressor we have fitted.
       <tbody>
         <tr>
           <th>RACE_Hispanic</th>
-          <td>-0.013519</td>
+          <td>-0.013555</td>
         </tr>
         <tr>
           <th>RACE_Other</th>
-          <td>-0.009075</td>
+          <td>-0.009111</td>
         </tr>
         <tr>
           <th>RACE_White</th>
-          <td>0.022594</td>
+          <td>0.022558</td>
         </tr>
         <tr>
           <th>OCCUPATION_Clerical</th>
-          <td>0.000045</td>
+          <td>0.000056</td>
         </tr>
         <tr>
           <th>OCCUPATION_Management</th>
-          <td>0.090528</td>
+          <td>0.090538</td>
         </tr>
         <tr>
           <th>OCCUPATION_Other</th>
-          <td>-0.025102</td>
+          <td>-0.025091</td>
         </tr>
         <tr>
           <th>OCCUPATION_Professional</th>
-          <td>0.071964</td>
+          <td>0.071974</td>
         </tr>
         <tr>
           <th>OCCUPATION_Sales</th>
-          <td>-0.046636</td>
+          <td>-0.046625</td>
         </tr>
         <tr>
           <th>OCCUPATION_Service</th>
-          <td>-0.091053</td>
+          <td>-0.091042</td>
         </tr>
         <tr>
           <th>SECTOR_Construction</th>
-          <td>-0.000198</td>
+          <td>-0.000176</td>
         </tr>
         <tr>
           <th>SECTOR_Manufacturing</th>
-          <td>0.031255</td>
+          <td>0.031277</td>
         </tr>
         <tr>
           <th>SECTOR_Other</th>
-          <td>-0.031025</td>
+          <td>-0.031004</td>
         </tr>
         <tr>
           <th>MARR_Unmarried</th>
@@ -1919,7 +1919,7 @@ Lessons learned
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  16.576 seconds)
+   **Total running time of the script:** ( 0 minutes  20.047 seconds)
 
 
 .. _sphx_glr_download_auto_examples_inspection_plot_linear_model_coefficient_interpretation.py:

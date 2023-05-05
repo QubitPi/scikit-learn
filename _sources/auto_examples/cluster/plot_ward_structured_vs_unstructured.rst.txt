@@ -123,7 +123,7 @@ without any connectivity constraints.
  .. code-block:: none
 
     Compute unstructured hierarchical clustering...
-    Elapsed time: 0.04s
+    Elapsed time: 0.05s
     Number of points: 1500
 
 
@@ -160,7 +160,7 @@ Plotting the unstructured hierarchical clusters.
 
 
 .. image-sg:: /auto_examples/cluster/images/sphx_glr_plot_ward_structured_vs_unstructured_001.png
-   :alt: Without connectivity constraints (time 0.04s)
+   :alt: Without connectivity constraints (time 0.05s)
    :srcset: /auto_examples/cluster/images/sphx_glr_plot_ward_structured_vs_unstructured_001.png
    :class: sphx-glr-single-img
 
@@ -268,7 +268,7 @@ Plotting the structured hierarchical clusters.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.440 seconds)
+   **Total running time of the script:** ( 0 minutes  0.498 seconds)
 
 
 .. _sphx_glr_download_auto_examples_cluster_plot_ward_structured_vs_unstructured.py:

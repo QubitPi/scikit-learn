@@ -511,6 +511,15 @@ In the following section we enforce positivity when finding the dictionary.
    :class: sphx-glr-single-img
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/sklearn/linear_model/_least_angle.py:677: ConvergenceWarning:
+
+    Early stopping the lars path, as the residues are small and the current value of alpha is no longer well controlled. 1 iterations, alpha=1.136e-03, previous alpha=1.027e-03, with an active set of 2 regressors.
+
+
 
 
 
@@ -596,7 +605,7 @@ coefficients are positively constrained.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  12.345 seconds)
+   **Total running time of the script:** ( 0 minutes  16.644 seconds)
 
 
 .. _sphx_glr_download_auto_examples_decomposition_plot_faces_decomposition.py:

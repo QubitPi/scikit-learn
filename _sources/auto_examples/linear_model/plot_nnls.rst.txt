@@ -111,7 +111,7 @@ Fit the Non-Negative least squares.
 
  .. code-block:: none
 
-    NNLS R2 score 0.8225220806196526
+    NNLS R2 score 0.8225220806196525
 
 
 
@@ -138,7 +138,7 @@ Fit an OLS.
 
  .. code-block:: none
 
-    OLS R2 score 0.7436926291700353
+    OLS R2 score 0.7436926291700354
 
 
 
@@ -186,7 +186,7 @@ The Non-Negative Least squares inherently yield sparse results.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.081 seconds)
+   **Total running time of the script:** ( 0 minutes  0.099 seconds)
 
 
 .. _sphx_glr_download_auto_examples_linear_model_plot_nnls.py:

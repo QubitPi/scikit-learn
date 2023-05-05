@@ -359,7 +359,7 @@ Log-likelihood: -0.067
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Kernel parameters before fit:
 1**2 * RationalQuadratic(alpha=0.1, length_scale=1))
 Kernel parameters after fit:
-0.594**2 * RationalQuadratic(alpha=4.6e+05, length_scale=0.279)
+0.594**2 * RationalQuadratic(alpha=1.01e+06, length_scale=0.279)
 Log-likelihood: -0.067
 </pre></div>
 </div>
@@ -441,14 +441,6 @@ ABNORMAL_TERMINATION_IN_LNSRCH.
 
 Increase the number of iterations (max_iter) or scale the data as shown in:
     https://scikit-learn.org/stable/modules/preprocessing.html
-
-/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/sklearn/gaussian_process/kernels.py:430: ConvergenceWarning:
-
-The optimal value found for dimension 0 of parameter k1__constant_value is close to the specified upper bound 10.0. Increasing the bound and calling fit again may find a better value.
-
-/opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/sklearn/gaussian_process/_gpr.py:447: UserWarning:
-
-Predicted variances smaller than 0. Setting those variances to 0.
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kernel parameters before fit:</span><span class="se">\n</span><span class="si">{</span><span class="n">kernel</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
@@ -461,8 +453,8 @@ Predicted variances smaller than 0. Setting those variances to 0.
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Kernel parameters before fit:
 0.316**2 * DotProduct(sigma_0=1) ** 2)
 Kernel parameters after fit:
-3.16**2 * DotProduct(sigma_0=9.61) ** 2
-Log-likelihood: -6576930005.798
+0.674**2 * DotProduct(sigma_0=2.13) ** 2
+Log-likelihood: -7957695978.947
 </pre></div>
 </div>
 </section>
@@ -504,7 +496,7 @@ Kernel parameters after fit:
 Log-likelihood: -1.185
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.800 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.065 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-gaussian-process-plot-gpr-prior-posterior-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/scikit-learn/scikit-learn/main?urlpath=lab/tree/notebooks/auto_examples/gaussian_process/plot_gpr_prior_posterior.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo13.svg" width="150px" /></a>
