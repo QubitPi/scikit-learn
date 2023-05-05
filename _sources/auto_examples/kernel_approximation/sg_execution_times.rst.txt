@@ -6,8 +6,8 @@
 
 Computation times
 =================
-**00:14.389** total execution time for **auto_examples_kernel_approximation** files:
+**00:11.576** total execution time for **auto_examples_kernel_approximation** files:
 
 +----------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_kernel_approximation_plot_scalable_poly_kernels.py` (``plot_scalable_poly_kernels.py``) | 00:14.389 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_kernel_approximation_plot_scalable_poly_kernels.py` (``plot_scalable_poly_kernels.py``) | 00:11.576 | 0.0 MB |
 +----------------------------------------------------------------------------------------------------------------------+-----------+--------+

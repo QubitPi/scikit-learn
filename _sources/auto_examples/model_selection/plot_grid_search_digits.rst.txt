@@ -319,7 +319,7 @@ of the hyper-parameters and create the grid-search instance:
     selected subset of best models based on precision and recall.
     Its scoring time is:
 
-    mean_score_time                                            0.006507
+    mean_score_time                                            0.005485
     mean_test_recall                                           0.877206
     std_test_recall                                            0.069196
     mean_test_precision                                             1.0
@@ -337,12 +337,12 @@ of the hyper-parameters and create the grid-search instance:
                  param_grid=[{&#x27;C&#x27;: [1, 10, 100, 1000], &#x27;gamma&#x27;: [0.001, 0.0001],
                               &#x27;kernel&#x27;: [&#x27;rbf&#x27;]},
                              {&#x27;C&#x27;: [1, 10, 100, 1000], &#x27;kernel&#x27;: [&#x27;linear&#x27;]}],
-                 refit=&lt;function refit_strategy at 0x7f089caa3820&gt;,
+                 refit=&lt;function refit_strategy at 0x7fb0ef15aaf0&gt;,
                  scoring=[&#x27;precision&#x27;, &#x27;recall&#x27;])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-220" type="checkbox" ><label for="sk-estimator-id-220" class="sk-toggleable__label sk-toggleable__label-arrow">GridSearchCV</label><div class="sk-toggleable__content"><pre>GridSearchCV(estimator=SVC(),
                  param_grid=[{&#x27;C&#x27;: [1, 10, 100, 1000], &#x27;gamma&#x27;: [0.001, 0.0001],
                               &#x27;kernel&#x27;: [&#x27;rbf&#x27;]},
                              {&#x27;C&#x27;: [1, 10, 100, 1000], &#x27;kernel&#x27;: [&#x27;linear&#x27;]}],
-                 refit=&lt;function refit_strategy at 0x7f089caa3820&gt;,
+                 refit=&lt;function refit_strategy at 0x7fb0ef15aaf0&gt;,
                  scoring=[&#x27;precision&#x27;, &#x27;recall&#x27;])</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-221" type="checkbox" ><label for="sk-estimator-id-221" class="sk-toggleable__label sk-toggleable__label-arrow">estimator: SVC</label><div class="sk-toggleable__content"><pre>SVC()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-222" type="checkbox" ><label for="sk-estimator-id-222" class="sk-toggleable__label sk-toggleable__label-arrow">SVC</label><div class="sk-toggleable__content"><pre>SVC()</pre></div></div></div></div></div></div></div></div></div></div>
     </div>
     <br />
@@ -419,7 +419,7 @@ metrics on the left-out set:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  12.230 seconds)
+   **Total running time of the script:** ( 0 minutes  10.273 seconds)
 
 
 .. _sphx_glr_download_auto_examples_model_selection_plot_grid_search_digits.py:

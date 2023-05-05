@@ -447,22 +447,14 @@ with each descendant node to select the best attribute to test at that point in 
 for an acceptable decision tree, in which the algorithm never backtracks to reconsider earlier choices. A simplified
 version of the algorithm, specialized to learning boolean-valued functions (i.e., concept learning), is described below
 
+- **"examples"**: the training examples
+- **"targe_tattribute"**: the attribute whose value is to be predicted by the tree
+- **"attributes"**: a list of other attributes that may be tested by the learned decision tree
+
 .. note::
 
   ID3(examples, targe_tattribute, attributes) :math:`\rightarrow` a decision tree that correctly
   classifies the given "examples"
-
-  .. list-table:: Title
-     :header-rows: 1
-
-     * - Concept
-       - Definition
-     * - "examples"
-       - the training examples
-     * - "targe_tattribute"
-       - the attribute whose value is to be predicted by the tree
-     * - "attributes"
-       - a list of other attributes that may be tested by the learned decision tree
 
   - Create a Root node for the tree
   - If all "examples" are positive, return the single-node tree Root, with label = ``+``

@@ -246,9 +246,9 @@ both approaches here.
  .. code-block:: none
 
     Features selected by forward sequential selection: ['bmi' 's5']
-    Done in 0.215s
+    Done in 0.171s
     Features selected by backward sequential selection: ['bmi' 's5']
-    Done in 0.598s
+    Done in 0.489s
 
 
 
@@ -282,7 +282,7 @@ SFS needs to perform `n_features - n_features_to_select = 8` iterations.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.922 seconds)
+   **Total running time of the script:** ( 0 minutes  0.749 seconds)
 
 
 .. _sphx_glr_download_auto_examples_feature_selection_plot_select_from_model_diabetes.py:

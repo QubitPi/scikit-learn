@@ -586,7 +586,7 @@ As before, we show the :ref:`brier_score_loss`, :ref:`log_loss`,
           <th>SVC + Isotonic</th>
           <td>0.099827</td>
           <td>0.377027</td>
-          <td>0.936466</td>
+          <td>0.936467</td>
           <td>0.853032</td>
           <td>0.878041</td>
           <td>0.865356</td>
@@ -633,7 +633,7 @@ References
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.055 seconds)
+   **Total running time of the script:** ( 0 minutes  3.374 seconds)
 
 
 .. _sphx_glr_download_auto_examples_calibration_plot_calibration_curve.py:
