@@ -591,8 +591,8 @@ for an acceptable decision tree, in which the algorithm never backtracks to reco
 version of the algorithm, specialized to learning boolean-valued functions (i.e., concept learning), is described below</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>ID3(examples, targe_tattribute, attributes) <span class="math notranslate nohighlight">\(\rightarrow\)</span> a decision tree that correctly classifies the given
-“examples”</p>
+<p>ID3(examples, targe_tattribute, attributes) <span class="math notranslate nohighlight">\(\rightarrow\)</span> a decision tree that correctly
+classifies the given “examples”</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concept</p></th>
@@ -620,23 +620,16 @@ a list of other attributes that may be tested by the learned decision tree</p></
 <li><p><span class="math notranslate nohighlight">\(\mathit{A}\)</span> <span class="math notranslate nohighlight">\(\leftarrow\)</span> attribute from “attributes” that best* classifies “examples”</p></li>
 <li><p>The decision attribute for Root <span class="math notranslate nohighlight">\(\leftarrow\)</span> <span class="math notranslate nohighlight">\(\mathit{A}\)</span></p></li>
 <li><p>For each possible value, <span class="math notranslate nohighlight">\(\mathit{v_i}\)</span>, of <span class="math notranslate nohighlight">\(\mathit{A}\)</span>,
-* Add a new tree branch below Root, corresponding to the test <span class="math notranslate nohighlight">\(\mathit{A}\)</span> = <span class="math notranslate nohighlight">\(v_i\)</span>
-* Let <span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span> be the subset of “examples” that have value <span class="math notranslate nohighlight">\(\mathit{v_i}\)</span> for</p>
+- Add a new tree branch below Root, corresponding to the test <span class="math notranslate nohighlight">\(\mathit{A}\)</span> = <span class="math notranslate nohighlight">\(v_i\)</span>
+- Let <span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span> be the subset of “examples” that have value <span class="math notranslate nohighlight">\(\mathit{v_i}\)</span> for <span class="math notranslate nohighlight">\(\mathit{A}\)</span>
+- If <span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span> is empty</p>
 <blockquote>
-<div><p><span class="math notranslate nohighlight">\(\mathit{A}\)</span></p>
-</div></blockquote>
-<ul>
-<li><p>If <span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span> is empty
-- then below this new branch add a leaf node with label = most common value of “targe_tattribute” attribute in</p>
-<blockquote>
-<div><p>“examples”</p>
-</div></blockquote>
-<ul class="simple">
+<div><ul class="simple">
+<li><p>then below this new branch add a leaf node with label = most common value of “targe_tattribute” attribute in “examples”</p></li>
 <li><p>else below this new branch add the subtree
 ID3(<span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span>, “targe_tattribute”, “attributes” - <span class="math notranslate nohighlight">\({\mathit{A}}\)</span>)</p></li>
 </ul>
-</li>
-</ul>
+</div></blockquote>
 </li>
 </ol>
 </dd>
@@ -671,8 +664,7 @@ relative to this c-wise classification is defined as</p>
 <p class="admonition-title">Note</p>
 <p>The logarithm is still base 2 because entropy is a measure of the expected encoding length measured in bits. If the
 target attribute can take on <span class="math notranslate nohighlight">\(\mathit{c}\)</span> possible values, the entropy can be as large as
-<span class="math notranslate nohighlight">\(\mathit{\log_2 c}\)</span>.</p>
-<p><strong>INFORMATION GAIN MEASURES THE EXPECTED REDUCTION IN ENTROPY</strong></p>
+<span class="math notranslate nohighlight">\(\mathit{\log_2 c}\)</span>. <strong>INFORMATION GAIN MEASURES THE EXPECTED REDUCTION IN ENTROPY</strong></p>
 </div>
 </section>
 <section id="hypothesis-space-search-in-decision-tree-learning">
@@ -690,7 +682,7 @@ available attributes.</p></li>
 <p>Inductive bias is the set of assumptions that, together with the training data, deductively justify the
 classifications assigned by the learner to future instances</p>
 </div>
-<p><strong>Approximate inductive bias of ID3</strong>: _Shorter trees are preferred over larger <a href="#id5"><span class="problematic" id="id6">trees_</span></a>. Trees that place high
+<p><strong>Approximate inductive bias of ID3</strong>: <em>Shorter trees are preferred over larger trees</em>. Trees that place high
 information gain attributes close to the root are preferred over those that do not.</p>
 </section>
 <section id="issues-in-decision-tree-learning">

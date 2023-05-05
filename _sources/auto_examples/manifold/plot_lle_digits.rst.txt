@@ -335,42 +335,42 @@ Finally, we can plot the resulting projection given by each method.
     *
 
       .. image-sg:: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_005.png
-         :alt: Isomap embedding (time 0.949s)
+         :alt: Isomap embedding (time 0.992s)
          :srcset: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_005.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_006.png
-         :alt: Standard LLE embedding (time 0.251s)
+         :alt: Standard LLE embedding (time 0.225s)
          :srcset: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_006.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_007.png
-         :alt: Modified LLE embedding (time 0.559s)
+         :alt: Modified LLE embedding (time 0.593s)
          :srcset: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_007.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_008.png
-         :alt: Hessian LLE embedding (time 0.664s)
+         :alt: Hessian LLE embedding (time 0.714s)
          :srcset: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_008.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_009.png
-         :alt: LTSA LLE embedding (time 0.537s)
+         :alt: LTSA LLE embedding (time 0.557s)
          :srcset: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_009.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_010.png
-         :alt: MDS embedding (time 3.834s)
+         :alt: MDS embedding (time 3.474s)
          :srcset: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_010.png
          :class: sphx-glr-multi-img
 
@@ -384,21 +384,21 @@ Finally, we can plot the resulting projection given by each method.
     *
 
       .. image-sg:: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_012.png
-         :alt: Spectral embedding (time 0.251s)
+         :alt: Spectral embedding (time 0.256s)
          :srcset: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_012.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_013.png
-         :alt: t-SNE embeedding (time 1.796s)
+         :alt: t-SNE embeedding (time 1.871s)
          :srcset: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_013.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_014.png
-         :alt: NCA embedding (time 3.168s)
+         :alt: NCA embedding (time 3.128s)
          :srcset: /auto_examples/manifold/images/sphx_glr_plot_lle_digits_014.png
          :class: sphx-glr-multi-img
 
@@ -409,7 +409,7 @@ Finally, we can plot the resulting projection given by each method.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  18.049 seconds)
+   **Total running time of the script:** ( 0 minutes  17.805 seconds)
 
 
 .. _sphx_glr_download_auto_examples_manifold_plot_lle_digits.py:

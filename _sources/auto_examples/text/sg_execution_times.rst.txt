@@ -6,12 +6,12 @@
 
 Computation times
 =================
-**00:26.905** total execution time for **auto_examples_text** files:
+**00:27.096** total execution time for **auto_examples_text** files:
 
 +------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_text_plot_document_classification_20newsgroups.py` (``plot_document_classification_20newsgroups.py``) | 00:11.139 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_text_plot_document_classification_20newsgroups.py` (``plot_document_classification_20newsgroups.py``) | 00:11.146 | 0.0 MB |
 +------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_text_plot_document_clustering.py` (``plot_document_clustering.py``)                                   | 00:09.402 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_text_plot_document_clustering.py` (``plot_document_clustering.py``)                                   | 00:09.738 | 0.0 MB |
 +------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_text_plot_hashing_vs_dict_vectorizer.py` (``plot_hashing_vs_dict_vectorizer.py``)                     | 00:06.363 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_text_plot_hashing_vs_dict_vectorizer.py` (``plot_hashing_vs_dict_vectorizer.py``)                     | 00:06.212 | 0.0 MB |
 +------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+

@@ -6,14 +6,14 @@
 
 Computation times
 =================
-**00:00.761** total execution time for **auto_examples_datasets** files:
+**00:00.749** total execution time for **auto_examples_datasets** files:
 
 +------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_datasets_plot_random_dataset.py` (``plot_random_dataset.py``)                       | 00:00.376 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_datasets_plot_random_dataset.py` (``plot_random_dataset.py``)                       | 00:00.373 | 0.0 MB |
 +------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_datasets_plot_iris_dataset.py` (``plot_iris_dataset.py``)                           | 00:00.166 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_datasets_plot_iris_dataset.py` (``plot_iris_dataset.py``)                           | 00:00.163 | 0.0 MB |
 +------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_datasets_plot_random_multilabel_dataset.py` (``plot_random_multilabel_dataset.py``) | 00:00.152 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_datasets_plot_random_multilabel_dataset.py` (``plot_random_multilabel_dataset.py``) | 00:00.147 | 0.0 MB |
 +------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_datasets_plot_digits_last_image.py` (``plot_digits_last_image.py``)                 | 00:00.067 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_datasets_plot_digits_last_image.py` (``plot_digits_last_image.py``)                 | 00:00.066 | 0.0 MB |
 +------------------------------------------------------------------------------------------------------------------+-----------+--------+

@@ -267,7 +267,7 @@ IDF normalization as provided by
 
  .. code-block:: none
 
-    vectorization done in 0.503 s
+    vectorization done in 0.484 s
     n_samples: 3387, n_features: 7929
 
 
@@ -449,7 +449,7 @@ the information retrieval and text mining literature.
 
  .. code-block:: none
 
-    LSA done in 0.397 s
+    LSA done in 0.410 s
     Explained variance of the SVD step: 18.4%
 
 
@@ -482,7 +482,7 @@ both :class:`~sklearn.cluster.KMeans` and
 
  .. code-block:: none
 
-    clustering done in 0.06 ± 0.05 s 
+    clustering done in 0.04 ± 0.03 s 
     Homogeneity: 0.398 ± 0.010
     Completeness: 0.435 ± 0.015
     V-measure: 0.416 ± 0.010
@@ -528,7 +528,7 @@ clustering evaluation metrics have improved. We repeat the experiment with
 
  .. code-block:: none
 
-    clustering done in 0.06 ± 0.04 s 
+    clustering done in 0.12 ± 0.00 s 
     Homogeneity: 0.348 ± 0.092
     Completeness: 0.376 ± 0.047
     V-measure: 0.358 ± 0.075
@@ -620,7 +620,7 @@ the hashed vector space.
 
  .. code-block:: none
 
-    vectorization done in 2.279 s
+    vectorization done in 2.268 s
 
 
 
@@ -652,7 +652,7 @@ hashed-lsa-reduced data:
 
  .. code-block:: none
 
-    clustering done in 0.05 ± 0.04 s 
+    clustering done in 0.08 ± 0.04 s 
     Homogeneity: 0.392 ± 0.008
     Completeness: 0.437 ± 0.011
     V-measure: 0.413 ± 0.009
@@ -680,7 +680,7 @@ hashed-lsa-reduced data:
 
  .. code-block:: none
 
-    clustering done in 0.07 ± 0.04 s 
+    clustering done in 0.06 ± 0.04 s 
     Homogeneity: 0.357 ± 0.043
     Completeness: 0.378 ± 0.046
     V-measure: 0.367 ± 0.043
@@ -774,7 +774,7 @@ quality compared to the traditional k-means algorithm.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.402 seconds)
+   **Total running time of the script:** ( 0 minutes  9.738 seconds)
 
 
 .. _sphx_glr_download_auto_examples_text_plot_document_clustering.py:

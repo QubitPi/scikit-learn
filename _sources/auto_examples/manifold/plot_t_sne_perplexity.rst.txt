@@ -55,10 +55,10 @@ those effects.
 
  .. code-block:: none
 
-    circles, perplexity=5 in 0.13 sec
-    circles, perplexity=30 in 0.17 sec
-    circles, perplexity=50 in 0.18 sec
-    circles, perplexity=100 in 0.17 sec
+    circles, perplexity=5 in 0.12 sec
+    circles, perplexity=30 in 0.16 sec
+    circles, perplexity=50 in 0.17 sec
+    circles, perplexity=100 in 0.18 sec
     S-curve, perplexity=5 in 0.12 sec
     S-curve, perplexity=30 in 0.15 sec
     S-curve, perplexity=50 in 0.17 sec
@@ -201,7 +201,7 @@ those effects.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.724 seconds)
+   **Total running time of the script:** ( 0 minutes  2.661 seconds)
 
 
 .. _sphx_glr_download_auto_examples_manifold_plot_t_sne_perplexity.py:
