@@ -280,7 +280,7 @@ feature is not informative:</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Raw Model score on training set:  0.0049896314219657345
-Raw Model score on test set:  0.004577621581534519
+Raw Model score on test set:  0.00457762158159003
 </pre></div>
 </div>
 <p>Next, we create a pipeline with the target encoder and ridge model. The pipeline
@@ -295,7 +295,7 @@ the model fits the data well and generalizes to the test set:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model with CV on test set: &quot;</span><span class="p">,</span> <span class="n">model_with_cv</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Model with CV on training set:  0.8000184677460286
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Model with CV on training set:  0.8000184677460285
 Model with CV on test set:  0.7927845601690948
 </pre></div>
 </div>
@@ -362,7 +362,7 @@ examples when generating the scikit-learn documentation</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/sklearn.set_config.html#sklearn.set_config" title="sklearn.set_config" class="sphx-glr-backref-module-sklearn sphx-glr-backref-type-py-function"><span class="n">sklearn</span><span class="o">.</span><span class="n">set_config</span></a><span class="p">(</span><span class="n">transform_output</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.421 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.337 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-preprocessing-plot-target-encoder-cross-val-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/scikit-learn/scikit-learn/main?urlpath=lab/tree/notebooks/auto_examples/preprocessing/plot_target_encoder_cross_val.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo25.svg" width="150px" /></a>

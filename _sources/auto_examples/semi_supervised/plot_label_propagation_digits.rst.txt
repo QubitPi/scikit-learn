@@ -225,7 +225,7 @@ Confusion matrix
  .. code-block:: none
 
 
-    <sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay object at 0x7fd1b38525b0>
+    <sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay object at 0x7f655a21c5e0>
 
 
 
@@ -307,7 +307,7 @@ Plot
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.577 seconds)
+   **Total running time of the script:** ( 0 minutes  0.393 seconds)
 
 
 .. _sphx_glr_download_auto_examples_semi_supervised_plot_label_propagation_digits.py:

@@ -161,9 +161,9 @@ dataset): unsupervised feature extraction / dimensionality reduction
  .. code-block:: none
 
     Extracting the top 150 eigenfaces from 966 faces
-    done in 0.283s
+    done in 0.092s
     Projecting the input data on the eigenfaces orthonormal basis
-    done in 0.012s
+    done in 0.008s
 
 
 
@@ -201,7 +201,7 @@ Train a SVM classification model
  .. code-block:: none
 
     Fitting the classifier to the training set
-    done in 8.157s
+    done in 5.105s
     Best estimator found by grid search:
     SVC(C=76823.03433306453, class_weight='balanced', gamma=0.003418945823095797)
 
@@ -244,7 +244,7 @@ Quantitative evaluation of the model quality on the test set
  .. code-block:: none
 
     Predicting people's names on the test set
-    done in 0.055s
+    done in 0.050s
                        precision    recall  f1-score   support
 
          Ariel Sharon       0.75      0.69      0.72        13
@@ -361,7 +361,7 @@ tensorflow to implement such models.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  30.451 seconds)
+   **Total running time of the script:** ( 0 minutes  22.231 seconds)
 
 
 .. _sphx_glr_download_auto_examples_applications_plot_face_recognition.py:
