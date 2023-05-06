@@ -603,12 +603,12 @@ classifies the given “examples”</p>
 <li><p>If all “examples” are positive, return the single-node tree Root, with label = <code class="docutils literal notranslate"><span class="pre">+</span></code></p></li>
 <li><p>If all “examples” are negative, return the single-node tree Root, with label = <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
 <li><p>If “attributes” is empty, return the single-node tree Root, with label = most common value of “target_attribute” in “examples”</p></li>
-<li><p>Otherwise begin
-1. <span class="math notranslate nohighlight">\(\mathit{A}\)</span> <span class="math notranslate nohighlight">\(\leftarrow\)</span> attribute from “attributes” that best* classifies “examples”
-2. The decision attribute for Root <span class="math notranslate nohighlight">\(\leftarrow\)</span> <span class="math notranslate nohighlight">\(\mathit{A}\)</span>
-3. For each possible value, <span class="math notranslate nohighlight">\(\mathit{v_i}\)</span>, of <span class="math notranslate nohighlight">\(\mathit{A}\)</span>,</p>
-<blockquote>
-<div><ol class="loweralpha simple">
+<li><p>Otherwise begin</p>
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(\mathit{A}\)</span> <span class="math notranslate nohighlight">\(\leftarrow\)</span> attribute from “attributes” that best* classifies “examples”</p></li>
+<li><p>The decision attribute for Root <span class="math notranslate nohighlight">\(\leftarrow\)</span> <span class="math notranslate nohighlight">\(\mathit{A}\)</span></p></li>
+<li><p>For each possible value, <span class="math notranslate nohighlight">\(\mathit{v_i}\)</span>, of <span class="math notranslate nohighlight">\(\mathit{A}\)</span>,</p>
+<ol class="loweralpha simple">
 <li><p>Add a new tree branch below Root, corresponding to the test <span class="math notranslate nohighlight">\(\mathit{A}\)</span> = <span class="math notranslate nohighlight">\(v_i\)</span></p></li>
 <li><p>Let <span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span> be the subset of “examples” that have value <span class="math notranslate nohighlight">\(\mathit{v_i}\)</span> for <span class="math notranslate nohighlight">\(\mathit{A}\)</span></p></li>
 <li><p>If <span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span> is empty</p></li>
@@ -619,7 +619,8 @@ classifies the given “examples”</p>
 <li><p>else below this new branch add the subtree ID3(<span class="math notranslate nohighlight">\(examples_{\mathit{v_i}}\)</span>, “targe_tattribute”, “attributes” - <span class="math notranslate nohighlight">\({\mathit{A}}\)</span>)</p></li>
 </ul>
 </div></blockquote>
-</div></blockquote>
+</li>
+</ol>
 </li>
 <li><p>End</p></li>
 <li><p>Return Root</p></li>

@@ -462,6 +462,7 @@ version of the algorithm, specialized to learning boolean-valued functions (i.e.
   - If all "examples" are negative, return the single-node tree Root, with label = ``-``
   - If "attributes" is empty, return the single-node tree Root, with label = most common value of "target_attribute" in "examples"
   - Otherwise begin
+
     1. :math:`\mathit{A}` :math:`\leftarrow` attribute from "attributes" that best* classifies "examples"
     2. The decision attribute for Root :math:`\leftarrow` :math:`\mathit{A}`
     3. For each possible value, :math:`\mathit{v_i}`, of :math:`\mathit{A}`,

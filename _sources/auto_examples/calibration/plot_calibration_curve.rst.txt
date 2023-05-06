@@ -596,9 +596,9 @@ As before, we show the :ref:`brier_score_loss`, :ref:`log_loss`,
           <td>0.098760</td>
           <td>0.321306</td>
           <td>0.937530</td>
-          <td>0.873706</td>
-          <td>0.848743</td>
-          <td>0.861044</td>
+          <td>0.873703</td>
+          <td>0.848723</td>
+          <td>0.861032</td>
         </tr>
       </tbody>
     </table>
@@ -633,7 +633,7 @@ References
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.412 seconds)
+   **Total running time of the script:** ( 0 minutes  4.165 seconds)
 
 
 .. _sphx_glr_download_auto_examples_calibration_plot_calibration_curve.py:

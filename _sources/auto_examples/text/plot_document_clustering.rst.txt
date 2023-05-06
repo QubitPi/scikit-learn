@@ -267,7 +267,7 @@ IDF normalization as provided by
 
  .. code-block:: none
 
-    vectorization done in 0.542 s
+    vectorization done in 0.522 s
     n_samples: 3387, n_features: 7929
 
 
@@ -389,7 +389,7 @@ best inertia (objective function of k-means) is chosen.
 
  .. code-block:: none
 
-    clustering done in 0.22 ± 0.03 s 
+    clustering done in 0.22 ± 0.04 s 
     Homogeneity: 0.351 ± 0.006
     Completeness: 0.402 ± 0.012
     V-measure: 0.375 ± 0.008
@@ -449,7 +449,7 @@ the information retrieval and text mining literature.
 
  .. code-block:: none
 
-    LSA done in 0.477 s
+    LSA done in 0.468 s
     Explained variance of the SVD step: 18.4%
 
 
@@ -482,7 +482,7 @@ both :class:`~sklearn.cluster.KMeans` and
 
  .. code-block:: none
 
-    clustering done in 0.10 ± 0.02 s 
+    clustering done in 0.10 ± 0.04 s 
     Homogeneity: 0.403 ± 0.001
     Completeness: 0.442 ± 0.015
     V-measure: 0.422 ± 0.007
@@ -528,7 +528,7 @@ clustering evaluation metrics have improved. We repeat the experiment with
 
  .. code-block:: none
 
-    clustering done in 0.11 ± 0.01 s 
+    clustering done in 0.09 ± 0.04 s 
     Homogeneity: 0.344 ± 0.089
     Completeness: 0.387 ± 0.062
     V-measure: 0.361 ± 0.078
@@ -620,7 +620,7 @@ the hashed vector space.
 
  .. code-block:: none
 
-    vectorization done in 2.876 s
+    vectorization done in 2.128 s
 
 
 
@@ -652,7 +652,7 @@ hashed-lsa-reduced data:
 
  .. code-block:: none
 
-    clustering done in 0.07 ± 0.05 s 
+    clustering done in 0.06 ± 0.04 s 
     Homogeneity: 0.387 ± 0.013
     Completeness: 0.428 ± 0.024
     V-measure: 0.406 ± 0.018
@@ -680,7 +680,7 @@ hashed-lsa-reduced data:
 
  .. code-block:: none
 
-    clustering done in 0.10 ± 0.03 s 
+    clustering done in 0.11 ± 0.05 s 
     Homogeneity: 0.365 ± 0.045
     Completeness: 0.388 ± 0.039
     V-measure: 0.376 ± 0.042
@@ -774,7 +774,7 @@ quality compared to the traditional k-means algorithm.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  12.398 seconds)
+   **Total running time of the script:** ( 0 minutes  10.975 seconds)
 
 
 .. _sphx_glr_download_auto_examples_text_plot_document_clustering.py:
