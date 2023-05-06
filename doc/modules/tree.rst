@@ -154,7 +154,8 @@ Once trained, you can plot the tree with the :func:`plot_tree` function::
   and the python package can be installed with `conda install python-graphviz`.
 
   Alternatively binaries for graphviz can be downloaded from the graphviz project homepage,
-  and the Python wrapper installed from pypi with `pip install graphviz`.
+  and the Python wrapper installed from pypi with `pip install graphviz`. On Mac, we can also install via
+  Homebrew with `brew install Graphviz`.
 
   Below is an example graphviz export of the above tree trained on the entire
   iris dataset; the results are saved in an output file `iris.pdf`::
@@ -192,6 +193,29 @@ Once trained, you can plot the tree with the :func:`plot_tree` function::
     :target: ../auto_examples/tree/plot_iris_dtc.html
     :align: center
     :scale: 75
+
+  The complete code snippet using the [Iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) is as follows::
+
+      from sklearn.datasets import load_iris
+      from sklearn import tree
+      import graphviz
+
+      iris = load_iris()
+      x, y = iris.data, iris.target
+      classifier = tree.DecisionTreeClassifier()
+      classifier = classifier.fit(x, y)
+
+      dot_data = tree.export_graphviz(
+         classifier,
+         out_file=None,
+         feature_names=iris.feature_names,
+         class_names=iris.target_names,
+         filled=True,
+         rounded=True,
+         special_characters=True
+      )
+      graph = graphviz.Source(dot_data)
+      graph.render("iris")
 
   Alternatively, the tree can also be exported in textual format with the
   function :func:`export_text`. This method doesn't require the installation
@@ -412,6 +436,139 @@ from each other? Which one is implemented in scikit-learn?
   information gain for categorical targets. Trees are grown to their
   maximum size and then a pruning step is usually applied to improve the
   ability of the tree to generalize to unseen data.
+
+  ID3 algorithm learns decision trees by constructing them topdown, beginning with the question "which attribute should
+  be tested at the root of the tree?" To answer this question, each instance attribute is evaluated using a statistical
+  test to determine how well it alone classifies the training examples. The best attribute is selected and used as the
+  test at the root node of the tree. A descendant of the root node is then created for each possible value of this
+  attribute, and the training examples are sorted to the appropriate descendant node (i.e., down the branch
+  corresponding to the example's value for this attribute). The entire process is then repeated using the training
+  examples associated with each descendant node to select the best attribute to test at that point in the tree. This
+  forms a greedy search for an acceptable decision tree, in which the algorithm never backtracks to reconsider earlier
+  choices. A simplified version of the algorithm, specialized to learning boolean-valued functions (i.e., concept
+  learning), is described below
+
+  - **"examples"**: the training examples
+  - **"targe_tattribute"**: the attribute whose value is to be predicted by the tree
+  - **"attributes"**: a list of other attributes that may be tested by the learned decision tree
+
+  .. note::
+
+    ID3(examples, targe_tattribute, attributes) :math:`\rightarrow` a decision tree that correctly
+    classifies the given "examples"
+
+    - Create a Root node for the tree
+    - If all "examples" are positive, return the single-node tree Root, with label = ``+``
+    - If all "examples" are negative, return the single-node tree Root, with label = ``-``
+    - If "attributes" is empty, return the single-node tree Root, with label = most common value of "target_attribute" in "examples"
+    - Otherwise begin
+
+      1. :math:`\mathit{A}` :math:`\leftarrow` attribute from "attributes" that best* classifies "examples"
+      2. The decision attribute for Root :math:`\leftarrow` :math:`\mathit{A}`
+      3. For each possible value, :math:`\mathit{v_i}`, of :math:`\mathit{A}`,
+
+         a. Add a new tree branch below Root, corresponding to the test :math:`\mathit{A}` = :math:`v_i`
+         b. Let :math:`examples_{\mathit{v_i}}` be the subset of "examples" that have value :math:`\mathit{v_i}` for :math:`\mathit{A}`
+         c. If :math:`examples_{\mathit{v_i}}` is empty
+           - then below this new branch add a leaf node with label = most common value of "targe_tattribute" attribute in "examples"
+           - else below this new branch add the subtree ID3(:math:`examples_{\mathit{v_i}}`, "targe_tattribute", "attributes" - :math:`{\mathit{A}}`)
+    - End
+    - Return Root
+
+  The best attribute is the one with the highest :ref:`information gain <which attribute is the best classifier>`
+
+  .. _which attribute is the best classifier:
+
+  Which Attribute Is the Best Classifier?
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  We will define a statistical property, called **Information Gain**, that measures how well a given attribute separates
+  the training examples according to their target classification. ID3 uses this information gain measure to select among
+  the candidate attributes at each step while growing the tree
+
+  Entropy Measures Homogeneity of Examples
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  In information theory, **Entropy** characterizes the (im)purity of an arbitrary collection of examples. Given a
+  collection :math:`\mathit{S}`, containing positive and negative examples of some target concept, the entropy of S
+  relative to this boolean classification is
+
+  .. math::
+
+      Entropy(\mathit{S}) \equiv \mathit{-p_\oplus \log_2 p_\oplus - p_\ominus \log_2 p_\ominus}
+
+  where :math:`\mathit{p_\oplus}`, is the proportion of positive examples in :math:`\mathit{S}` and
+  :math:`\mathit{p_\ominus}` the proportion of negative examples in :math:`\mathit{S}`
+
+  If the target attribute can take on :math:`\mathit{c}` different values, then the entropy of :math:`\mathit{S}`
+  relative to this c-wise classification is defined as
+
+  .. math::
+
+      Entropy(\mathit{S}) \equiv \mathit{\sum_{i = 1}^{c} -p_i \log_2 p_i}
+
+  where :math:`\mathit{p_i}` is the proportion of :math:`\mathit{S}` belonging to class :math:`\mathit{i}`.
+
+  .. note::
+
+    The logarithm is still base 2 because entropy is a measure of the expected encoding length measured in bits. If the
+    target attribute can take on :math:`\mathit{c}` possible values, the entropy can be as large as
+    :math:`\mathit{\log_2 c}`. **INFORMATION GAIN MEASURES THE EXPECTED REDUCTION IN ENTROPY**
+
+  Hypothesis Space Search in Decision Tree Learning
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  * ID3's hypothesis space of all decision trees is a complete space of finite discrete-valued functions, relative to the
+    available attributes.
+  * ID3 maintains only a single current hypothesis
+
+  Inductive Bias in Decision Tree Learning
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. note::
+
+    Inductive bias is the set of assumptions that, together with the training data, deductively justify the
+    classifications assigned by the learner to future instances
+
+  **Approximate inductive bias of ID3**: *Shorter trees are preferred over larger trees*. Trees that place high
+  information gain attributes close to the root are preferred over those that do not.
+
+  Issues in Decision Tree Learning
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Avoiding Overfitting the Data
+  """""""""""""""""""""""""""""
+
+  .. note::
+
+    Given a hypothesis space :math:`\mathit{H}`, a hypothesis :math:`\mathit{h \in H}` is said to **overfit** the
+    training data if there exists some alternative hypothesis :math:`\mathit{h' \in H}`, such that :math:`\mathit{h}` has
+    smaller error than :math:`\mathit{h'}` over the training examples, but :math:`\mathit{h'}` has a smaller error than
+    :math:`\mathit{h}` over the entire distribution of instances.
+
+  Overfitting is a significant practical difficulty for decision tree learning and many other learning methods. There are
+  several approaches to avoiding overfitting in decision tree learning. These can be grouped into two classes
+
+  1. approaches that stop growing the tree earlier, before it reaches the point where it perfectly classifies the training
+     data
+  2. approaches that allow the tree to overfit the data, and then post-prune the tree
+
+  Although the first of these approaches might seem.more direct, the second approach of post-pruning overfit trees has
+  been found to be more successful in practice. This is due to the difficulty in the first approach of estimating
+  precisely when to stop growing the tree. What criterion is to be used to determine the correct final tree size then?
+
+  Approaches include:
+
+  1. Use a separate set of examples, distinct from the training examples, to evaluate the utility of post-pruning nodes
+     from the tree (**training and validation set** approach).
+  2. Use all the available data for training, but apply a statistical test to estimate whether expanding (or pruning) a
+     particular node is likely to produce an improvement beyond the training set.
+  3. Use an explicit measure of the complexity for encoding the training examples and the decision tree, halting growth of
+     the tree when this encoding size is minimized. This approach is based on a heuristic called the **Minimum Description
+     Length principle**
+
+  Other Algorithms
+  ----------------
 
   C4.5 is the successor to ID3 and removed the restriction that features
   must be categorical by dynamically defining a discrete attribute (based
