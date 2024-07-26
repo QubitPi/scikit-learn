@@ -1,0 +1,1058 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Version 1.6" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://scikit-learn/stable/whats_new/v1.6.html" />
+<meta property="og:site_name" content="scikit-learn" />
+<meta property="og:description" content="Legend for changelogs something big that you couldn’t do before., something that you couldn’t do before., an existing feature now may not require as much computation or memory., a miscellaneous min..." />
+<meta property="og:image" content="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" />
+<meta property="og:image:alt" content="scikit-learn" />
+<meta name="description" content="Legend for changelogs something big that you couldn’t do before., something that you couldn’t do before., an existing feature now may not require as much computation or memory., a miscellaneous min..." />
+
+    <title>Version 1.6 &#8212; scikit-learn 1.6.dev0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/colors.css?v=cc94ab7d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css?v=e4cb1417" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=d875d36e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=97f0b27d"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-domain="scikit-learn.org" defer="defer" src="https://views.scientific-python.org/js/script.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'whats_new/v1.6';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://scikit-learn.org/dev/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '1.6.dev0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/scripts/dropdown.js?v=e2048168"></script>
+    <script src="../_static/scripts/version-switcher.js?v=a6dd8357"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Version 1.5" href="v1.5.html" />
+    <link rel="prev" title="Release History" href="../whats_new.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/scikit-learn-logo-small.png" class="logo__image only-light" alt="scikit-learn homepage"/>
+    <script>document.write(`<img src="../_static/scikit-learn-logo-small.png" class="logo__image only-dark" alt="scikit-learn homepage"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../install.html">
+    Install
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../auto_examples/index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://blog.scikit-learn.org/">
+    Community
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../getting_started.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../whats_new.html">
+    Release History
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../developers/index.html">
+    Development
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../support.html">
+    Support
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../related_projects.html">
+    Related Projects
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../roadmap.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../governance.html">
+    Governance
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../about.html">
+    About us
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/scikit-learn/scikit-learn" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../install.html">
+    Install
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../auto_examples/index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://blog.scikit-learn.org/">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../getting_started.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../whats_new.html">
+    Release History
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../developers/index.html">
+    Development
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../support.html">
+    Support
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../related_projects.html">
+    Related Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../roadmap.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../governance.html">
+    Governance
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about.html">
+    About us
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/scikit-learn/scikit-learn" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Version 1.6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v1.5.html">Version 1.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v1.4.html">Version 1.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v1.3.html">Version 1.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v1.2.html">Version 1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v1.1.html">Version 1.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v1.0.html">Version 1.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.24.html">Version 0.24</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.23.html">Version 0.23</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.22.html">Version 0.22</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.21.html">Version 0.21</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.20.html">Version 0.20</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.19.html">Version 0.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.18.html">Version 0.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.17.html">Version 0.17</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.16.html">Version 0.16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.15.html">Version 0.15</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.14.html">Version 0.14</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.13.html">Version 0.13</a></li>
+<li class="toctree-l1"><a class="reference internal" href="older_versions.html">Older Versions</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../whats_new.html" class="nav-link">Release History</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Version 1.6</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="version-1-6">
+<span id="release-notes-1-6"></span><h1>Version 1.6<a class="headerlink" href="#version-1-6" title="Link to this heading">#</a></h1>
+<p class="rubric">Legend for changelogs</p>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-success">Major Feature</span></span>  something big that you couldn’t do before.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  something that you couldn’t do before.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-info">Efficiency</span></span>  an existing feature now may not require as much computation or
+memory.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  a miscellaneous minor improvement.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-danger">Fix</span></span>  something that previously didn’t work as documented – or according
+to reasonable expectations – should now work.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-warning">API Change</span></span>  you will need to change your code to have the same effect in the
+future; or a feature will be removed in the future.</p></li>
+</ul>
+<section id="version-1-6-0">
+<span id="changes-1-6"></span><h2>Version 1.6.0<a class="headerlink" href="#version-1-6-0" title="Link to this heading">#</a></h2>
+<p><strong>In Development</strong></p>
+<section id="support-for-array-api">
+<h3>Support for Array API<a class="headerlink" href="#support-for-array-api" title="Link to this heading">#</a></h3>
+<p>Additional estimators and functions have been updated to include support for all
+<a class="reference external" href="https://data-apis.org/array-api/latest/">Array API</a> compliant inputs.</p>
+<p>See <a class="reference internal" href="../modules/array_api.html#array-api"><span class="std std-ref">Array API support (experimental)</span></a> for more details.</p>
+<p><strong>Functions:</strong></p>
+<ul class="simple">
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.cluster.entropy</span></code> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29141">#29141</a> by <a class="reference external" href="https://github.com/Tialo">Yaroslav Korobko</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.d2_tweedie_score.html#sklearn.metrics.d2_tweedie_score" title="sklearn.metrics.d2_tweedie_score"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.d2_tweedie_score</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29207">#29207</a> by <a class="reference external" href="https://github.com/EmilyXinyi">Emily Chen</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.max_error.html#sklearn.metrics.max_error" title="sklearn.metrics.max_error"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.max_error</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29212">#29212</a> by <a class="reference external" href="https://github.com/EdAbati">Edoardo Abati</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.mean_absolute_error.html#sklearn.metrics.mean_absolute_error" title="sklearn.metrics.mean_absolute_error"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.mean_absolute_error</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/27736">#27736</a> by <a class="reference external" href="https://github.com/EdAbati">Edoardo Abati</a>
+and <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29143">#29143</a> by <a class="reference external" href="https://github.com/Tialo">Tialo</a> and <a class="reference external" href="https://github.com/lesteve">Loïc Estève</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.mean_absolute_percentage_error.html#sklearn.metrics.mean_absolute_percentage_error" title="sklearn.metrics.mean_absolute_percentage_error"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.mean_absolute_percentage_error</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29300">#29300</a> by <a class="reference external" href="https://github.com/EmilyXinyi">Emily Chen</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.mean_gamma_deviance.html#sklearn.metrics.mean_gamma_deviance" title="sklearn.metrics.mean_gamma_deviance"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.mean_gamma_deviance</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29239">#29239</a> by <a class="reference external" href="https://github.com/EmilyXinyi">Emily Chen</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.mean_poisson_deviance.html#sklearn.metrics.mean_poisson_deviance" title="sklearn.metrics.mean_poisson_deviance"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.mean_poisson_deviance</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29227">#29227</a> by <a class="reference external" href="https://github.com/EmilyXinyi">Emily Chen</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.mean_squared_error.html#sklearn.metrics.mean_squared_error" title="sklearn.metrics.mean_squared_error"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.mean_squared_error</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29142">#29142</a> by <a class="reference external" href="https://github.com/Tialo">Yaroslav Korobko</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.mean_tweedie_deviance.html#sklearn.metrics.mean_tweedie_deviance" title="sklearn.metrics.mean_tweedie_deviance"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.mean_tweedie_deviance</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28106">#28106</a> by <a class="reference external" href="https://github.com/lithomas1">Thomas Li</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.pairwise.additive_chi2_kernel.html#sklearn.metrics.pairwise.additive_chi2_kernel" title="sklearn.metrics.pairwise.additive_chi2_kernel"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise.additive_chi2_kernel</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29144">#29144</a> by <a class="reference external" href="https://github.com/Tialo">Yaroslav Korobko</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.pairwise.chi2_kernel.html#sklearn.metrics.pairwise.chi2_kernel" title="sklearn.metrics.pairwise.chi2_kernel"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise.chi2_kernel</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29267">#29267</a> by <a class="reference external" href="https://github.com/Tialo">Yaroslav Korobko</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.pairwise.cosine_distances.html#sklearn.metrics.pairwise.cosine_distances" title="sklearn.metrics.pairwise.cosine_distances"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise.cosine_distances</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29265">#29265</a> by <a class="reference external" href="https://github.com/EmilyXinyi">Emily Chen</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.pairwise.cosine_similarity.html#sklearn.metrics.pairwise.cosine_similarity" title="sklearn.metrics.pairwise.cosine_similarity"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise.cosine_similarity</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29014">#29014</a> by <a class="reference external" href="https://github.com/EdAbati">Edoardo Abati</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.pairwise.paired_cosine_distances.html#sklearn.metrics.pairwise.paired_cosine_distances" title="sklearn.metrics.pairwise.paired_cosine_distances"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise.paired_cosine_distances</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29112">#29112</a> by <a class="reference external" href="https://github.com/EdAbati">Edoardo Abati</a>.</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.pairwise.paired_euclidean_distances.html#sklearn.metrics.pairwise.paired_euclidean_distances" title="sklearn.metrics.pairwise.paired_euclidean_distances"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise.paired_euclidean_distances</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29389">#29389</a> by <a class="reference external" href="https://github.com/EmilyXinyi">Emily Chen</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.pairwise.euclidean_distances.html#sklearn.metrics.pairwise.euclidean_distances" title="sklearn.metrics.pairwise.euclidean_distances"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise.euclidean_distances</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29433">#29433</a> by <a class="reference external" href="https://github.com/OmarManzoor">Omar Salman</a>;</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.metrics.pairwise.rbf_kernel.html#sklearn.metrics.pairwise.rbf_kernel" title="sklearn.metrics.pairwise.rbf_kernel"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise.rbf_kernel</span></code></a> <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29433">#29433</a> by <a class="reference external" href="https://github.com/OmarManzoor">Omar Salman</a>.</p></li>
+</ul>
+<p><strong>Classes:</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../modules/generated/sklearn.preprocessing.LabelEncoder.html#sklearn.preprocessing.LabelEncoder" title="sklearn.preprocessing.LabelEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">preprocessing.LabelEncoder</span></code></a> now supports Array API compatible inputs.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/27381">#27381</a> by <a class="reference external" href="https://github.com/OmarManzoor">Omar Salman</a>.</p></li>
+<li><p><a class="reference internal" href="../modules/generated/sklearn.model_selection.GridSearchCV.html#sklearn.model_selection.GridSearchCV" title="sklearn.model_selection.GridSearchCV"><code class="xref py py-class docutils literal notranslate"><span class="pre">model_selection.GridSearchCV</span></code></a>,
+<a class="reference internal" href="../modules/generated/sklearn.model_selection.RandomizedSearchCV.html#sklearn.model_selection.RandomizedSearchCV" title="sklearn.model_selection.RandomizedSearchCV"><code class="xref py py-class docutils literal notranslate"><span class="pre">model_selection.RandomizedSearchCV</span></code></a>,
+<a class="reference internal" href="../modules/generated/sklearn.model_selection.HalvingGridSearchCV.html#sklearn.model_selection.HalvingGridSearchCV" title="sklearn.model_selection.HalvingGridSearchCV"><code class="xref py py-class docutils literal notranslate"><span class="pre">model_selection.HalvingGridSearchCV</span></code></a> and
+<a class="reference internal" href="../modules/generated/sklearn.model_selection.HalvingRandomSearchCV.html#sklearn.model_selection.HalvingRandomSearchCV" title="sklearn.model_selection.HalvingRandomSearchCV"><code class="xref py py-class docutils literal notranslate"><span class="pre">model_selection.HalvingRandomSearchCV</span></code></a> now support Array API
+compatible inputs when their base estimators do. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/27096">#27096</a> by <a class="reference external" href="https://github.com/betatim">Tim
+Head</a> and <a class="reference external" href="https://github.com/ogrisel">Olivier Grisel</a>.</p></li>
+</ul>
+</section>
+<section id="metadata-routing">
+<h3>Metadata Routing<a class="headerlink" href="#metadata-routing" title="Link to this heading">#</a></h3>
+<p>The following models now support metadata routing in one or more of their
+methods. Refer to the <a class="reference internal" href="../metadata_routing.html#metadata-routing"><span class="std std-ref">Metadata Routing User Guide</span></a> for
+more details.</p>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.model_selection.learning_curve.html#sklearn.model_selection.learning_curve" title="sklearn.model_selection.learning_curve"><code class="xref py py-func docutils literal notranslate"><span class="pre">model_selection.learning_curve</span></code></a> now supports metadata routing for the
+<code class="docutils literal notranslate"><span class="pre">fit</span></code> method of its estimator and for its underlying CV splitter and scorer.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28975">#28975</a> by <a class="reference external" href="https://github.com/StefanieSenger">Stefanie Senger</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.ensemble.StackingClassifier.html#sklearn.ensemble.StackingClassifier" title="sklearn.ensemble.StackingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.StackingClassifier</span></code></a> and
+<a class="reference internal" href="../modules/generated/sklearn.ensemble.StackingRegressor.html#sklearn.ensemble.StackingRegressor" title="sklearn.ensemble.StackingRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.StackingRegressor</span></code></a> now support metadata routing and pass
+<code class="docutils literal notranslate"><span class="pre">**fit_params</span></code> to the underlying estimators via their <code class="docutils literal notranslate"><span class="pre">fit</span></code> methods.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28701">#28701</a> by <a class="reference external" href="https://github.com/StefanieSenger">Stefanie Senger</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor" title="sklearn.compose.TransformedTargetRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">compose.TransformedTargetRegressor</span></code></a> now supports metadata
+routing in its <code class="docutils literal notranslate"><span class="pre">fit</span></code> and <code class="docutils literal notranslate"><span class="pre">predict</span></code> methods and routes the corresponding
+params to the underlying regressor.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29136">#29136</a> by <a class="reference external" href="https://github.com/OmarManzoor">Omar Salman</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.model_selection.validation_curve.html#sklearn.model_selection.validation_curve" title="sklearn.model_selection.validation_curve"><code class="xref py py-func docutils literal notranslate"><span class="pre">model_selection.validation_curve</span></code></a> now supports metadata routing for
+the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method of its estimator and for its underlying CV splitter and scorer.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29329">#29329</a> by <a class="reference external" href="https://github.com/StefanieSenger">Stefanie Senger</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.semi_supervised.SelfTrainingClassifier.html#sklearn.semi_supervised.SelfTrainingClassifier" title="sklearn.semi_supervised.SelfTrainingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">semi_supervised.SelfTrainingClassifier</span></code></a>
+now supports metadata routing. The fit method now accepts <code class="docutils literal notranslate"><span class="pre">**fit_params</span></code>
+which are passed to the underlying estimators via their <code class="docutils literal notranslate"><span class="pre">fit</span></code> methods.
+In addition, the <code class="docutils literal notranslate"><span class="pre">predict</span></code>, <code class="docutils literal notranslate"><span class="pre">predict_proba</span></code>, <code class="docutils literal notranslate"><span class="pre">predict_log_proba</span></code>, <code class="docutils literal notranslate"><span class="pre">score</span></code>
+and <code class="docutils literal notranslate"><span class="pre">decision_function</span></code> methods also accept <code class="docutils literal notranslate"><span class="pre">**params</span></code> which are
+passed to the underlying estimators via their respective methods.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28494">#28494</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.model_selection.permutation_test_score.html#sklearn.model_selection.permutation_test_score" title="sklearn.model_selection.permutation_test_score"><code class="xref py py-func docutils literal notranslate"><span class="pre">model_selection.permutation_test_score</span></code></a> now supports metadata routing
+for the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method of its estimator and for its underlying CV splitter and scorer.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29266">#29266</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a>.</p></li>
+</ul>
+</section>
+<section id="dropping-support-for-building-with-setuptools">
+<h3>Dropping support for building with setuptools<a class="headerlink" href="#dropping-support-for-building-with-setuptools" title="Link to this heading">#</a></h3>
+<p>From scikit-learn 1.6 onwards, support for building with setuptools has been
+removed. Meson is the only supported way to build scikit-learn, see
+<a class="reference internal" href="../developers/advanced_installation.html#install-bleeding-edge"><span class="std std-ref">Building from source</span></a> for more details.</p>
+<p><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29400">#29400</a> by <a class="reference external" href="https://github.com/lesteve">Loïc Estève</a></p>
+</section>
+<section id="dropping-official-support-for-pypy">
+<h3>Dropping official support for PyPy<a class="headerlink" href="#dropping-official-support-for-pypy" title="Link to this heading">#</a></h3>
+<p>Due to limited maintainer resources and small number of users, official PyPy
+support has been dropped. Some parts of scikit-learn may still work but PyPy is
+not tested anymore in the scikit-learn Continuous Integration.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29128">#29128</a> by <a class="reference external" href="https://github.com/lesteve">Loïc Estève</a>.</p>
+</section>
+<section id="changelog">
+<h3>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h3>
+<section id="sklearn-base">
+<h4><a class="reference internal" href="../api/sklearn.base.html#module-sklearn.base" title="sklearn.base"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.base</span></code></a><a class="headerlink" href="#sklearn-base" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  Added a function <a class="reference internal" href="../modules/generated/sklearn.base.is_clusterer.html#sklearn.base.is_clusterer" title="sklearn.base.is_clusterer"><code class="xref py py-func docutils literal notranslate"><span class="pre">base.is_clusterer</span></code></a> which determines
+whether a given estimator is of category clusterer.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28936">#28936</a> by <a class="reference external" href="https://github.com/ChVeen">Christian Veenhuis</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-cluster">
+<h4><a class="reference internal" href="../api/sklearn.cluster.html#module-sklearn.cluster" title="sklearn.cluster"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.cluster</span></code></a><a class="headerlink" href="#sklearn-cluster" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-warning">API Change</span></span>  The <code class="docutils literal notranslate"><span class="pre">copy</span></code> parameter of <a class="reference internal" href="../modules/generated/sklearn.cluster.Birch.html#sklearn.cluster.Birch" title="sklearn.cluster.Birch"><code class="xref py py-class docutils literal notranslate"><span class="pre">cluster.Birch</span></code></a> was deprecated in 1.6 and will be
+removed in 1.8. It has no effect as the estimator does not perform in-place operations
+on the input data.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29124">#29124</a> by <a class="reference external" href="https://github.com/Charlie-XIAO">Yao Xiao</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-compose">
+<h4><a class="reference internal" href="../api/sklearn.compose.html#module-sklearn.compose" title="sklearn.compose"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.compose</span></code></a><a class="headerlink" href="#sklearn-compose" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  <a class="reference internal" href="../modules/generated/sklearn.compose.ColumnTransformer.html#sklearn.compose.ColumnTransformer" title="sklearn.compose.ColumnTransformer"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.compose.ColumnTransformer</span></code></a> <code class="docutils literal notranslate"><span class="pre">verbose_feature_names_out</span></code>
+now accepts string format or callable to generate feature names. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28934">#28934</a> by
+<a class="reference external" href="https://github.com/MarcBresson">Marc Bresson</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-datasets">
+<h4><a class="reference internal" href="../api/sklearn.datasets.html#module-sklearn.datasets" title="sklearn.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.datasets</span></code></a><a class="headerlink" href="#sklearn-datasets" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <code class="xref py py-func docutils literal notranslate"><span class="pre">datasets.fetch_file</span></code> allows downloading arbitrary data-file
+from the web. It handles local caching, integrity checks with SHA256 digests
+and automatic retries in case of HTTP errors. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29354">#29354</a> by <a class="reference external" href="https://github.com/ogrisel">Olivier
+Grisel</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-discriminant-analysis">
+<h4><a class="reference internal" href="../api/sklearn.discriminant_analysis.html#module-sklearn.discriminant_analysis" title="sklearn.discriminant_analysis"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.discriminant_analysis</span></code></a><a class="headerlink" href="#sklearn-discriminant-analysis" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-danger">Fix</span></span>  <a class="reference internal" href="../modules/generated/sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.html#sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis" title="sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">discriminant_analysis.QuadraticDiscriminantAnalysis</span></code></a>
+will now cause <code class="docutils literal notranslate"><span class="pre">LinAlgWarning</span></code> in case of collinear variables. These errors
+can be silenced using the <code class="docutils literal notranslate"><span class="pre">reg_param</span></code> attribute.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/19731">#19731</a> by <a class="reference external" href="https://github.com/azihna">Alihan Zihna</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-ensemble">
+<h4><a class="reference internal" href="../api/sklearn.ensemble.html#module-sklearn.ensemble" title="sklearn.ensemble"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.ensemble</span></code></a><a class="headerlink" href="#sklearn-ensemble" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-info">Efficiency</span></span>  Small runtime improvement of fitting
+<a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html#sklearn.ensemble.HistGradientBoostingClassifier" title="sklearn.ensemble.HistGradientBoostingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingClassifier</span></code></a> and <a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html#sklearn.ensemble.HistGradientBoostingRegressor" title="sklearn.ensemble.HistGradientBoostingRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingRegressor</span></code></a>
+by parallelizing the initial search for bin thresholds
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28064">#28064</a> by <a class="reference external" href="https://github.com/lorentzenchr">Christian Lorentzen</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  The verbosity of <a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html#sklearn.ensemble.HistGradientBoostingClassifier" title="sklearn.ensemble.HistGradientBoostingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingClassifier</span></code></a>
+and <a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html#sklearn.ensemble.HistGradientBoostingRegressor" title="sklearn.ensemble.HistGradientBoostingRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingRegressor</span></code></a> got a more granular control. Now,
+<code class="docutils literal notranslate"><span class="pre">verbose</span> <span class="pre">=</span> <span class="pre">1</span></code> prints only summary messages, <code class="docutils literal notranslate"><span class="pre">verbose</span> <span class="pre">&gt;=</span> <span class="pre">2</span></code> prints the full
+information as before.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28179">#28179</a> by <a class="reference external" href="https://github.com/lorentzenchr">Christian Lorentzen</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-info">Efficiency</span></span>  <a class="reference internal" href="../modules/generated/sklearn.ensemble.IsolationForest.html#sklearn.ensemble.IsolationForest" title="sklearn.ensemble.IsolationForest"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.IsolationForest</span></code></a> now runs parallel jobs
+during <a class="reference internal" href="../glossary.html#term-predict"><span class="xref std std-term">predict</span></a> offering a speedup of up to 2-4x on sample sizes
+larger than 2000 using <code class="docutils literal notranslate"><span class="pre">joblib</span></code>.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28622">#28622</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a> and
+<a class="reference external" href="https://github.com/sergiormpereira">Sérgio Pereira</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.ensemble.ExtraTreesClassifier.html#sklearn.ensemble.ExtraTreesClassifier" title="sklearn.ensemble.ExtraTreesClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.ExtraTreesClassifier</span></code></a> and <a class="reference internal" href="../modules/generated/sklearn.ensemble.ExtraTreesRegressor.html#sklearn.ensemble.ExtraTreesRegressor" title="sklearn.ensemble.ExtraTreesRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.ExtraTreesRegressor</span></code></a> now support
+missing-values in the data matrix <code class="docutils literal notranslate"><span class="pre">X</span></code>. Missing-values are handled by randomly moving all of
+the samples to the left, or right child node as the tree is traversed.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28268">#28268</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-impute">
+<h4><a class="reference internal" href="../api/sklearn.impute.html#module-sklearn.impute" title="sklearn.impute"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.impute</span></code></a><a class="headerlink" href="#sklearn-impute" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-danger">Fix</span></span>  <a class="reference internal" href="../modules/generated/sklearn.impute.KNNImputer.html#sklearn.impute.KNNImputer" title="sklearn.impute.KNNImputer"><code class="xref py py-class docutils literal notranslate"><span class="pre">impute.KNNImputer</span></code></a> excludes samples with nan distances when
+computing the mean value for uniform weights.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29135">#29135</a> by <a class="reference external" href="https://github.com/xuefeng-xu">Xuefeng Xu</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-linear-model">
+<h4><a class="reference internal" href="../api/sklearn.linear_model.html#module-sklearn.linear_model" title="sklearn.linear_model"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.linear_model</span></code></a><a class="headerlink" href="#sklearn-linear-model" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-warning">API Change</span></span>  Deprecates <code class="docutils literal notranslate"><span class="pre">copy_X</span></code> in <a class="reference internal" href="../modules/generated/sklearn.linear_model.TheilSenRegressor.html#sklearn.linear_model.TheilSenRegressor" title="sklearn.linear_model.TheilSenRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">linear_model.TheilSenRegressor</span></code></a> as the parameter
+has no effect. <code class="docutils literal notranslate"><span class="pre">copy_X</span></code> will be removed in 1.8.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29105">#29105</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-manifold">
+<h4><a class="reference internal" href="../api/sklearn.manifold.html#module-sklearn.manifold" title="sklearn.manifold"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.manifold</span></code></a><a class="headerlink" href="#sklearn-manifold" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-info">Efficiency</span></span>  <a class="reference internal" href="../modules/generated/sklearn.manifold.locally_linear_embedding.html#sklearn.manifold.locally_linear_embedding" title="sklearn.manifold.locally_linear_embedding"><code class="xref py py-func docutils literal notranslate"><span class="pre">manifold.locally_linear_embedding</span></code></a> and
+<a class="reference internal" href="../modules/generated/sklearn.manifold.LocallyLinearEmbedding.html#sklearn.manifold.LocallyLinearEmbedding" title="sklearn.manifold.LocallyLinearEmbedding"><code class="xref py py-class docutils literal notranslate"><span class="pre">manifold.LocallyLinearEmbedding</span></code></a> now allocate more efficiently the memory of
+sparse matrices in the Hessian, Modified and LTSA methods.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28096">#28096</a> by <a class="reference external" href="https://github.com/giorgioangel">Giorgio Angelotti</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-metrics">
+<h4><a class="reference internal" href="../api/sklearn.metrics.html#module-sklearn.metrics" title="sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.metrics</span></code></a><a class="headerlink" href="#sklearn-metrics" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  <a class="reference internal" href="../modules/generated/sklearn.metrics.check_scoring.html#sklearn.metrics.check_scoring" title="sklearn.metrics.check_scoring"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.check_scoring</span></code></a> now accepts <code class="docutils literal notranslate"><span class="pre">raise_exc</span></code> to specify
+whether to raise an exception if a subset of the scorers in multimetric scoring fails
+or to return an error code. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28992">#28992</a> by <a class="reference external" href="https://github.com/StefanieSenger">Stefanie Senger</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  Adds <code class="docutils literal notranslate"><span class="pre">zero_division</span></code> to <code class="xref py py-func docutils literal notranslate"><span class="pre">cohen_kappa_score</span></code>. When there is a
+division by zero, the metric is undefined and this value is returned.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29210">#29210</a> by <a class="reference external" href="https://github.com/marctorsoc">Marc Torrellas Socastro</a> and
+<a class="reference external" href="https://github.com/StefanieSenger">Stefanie Senger</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-warning">API Change</span></span>  scoring=”neg_max_error” should be used instead of
+scoring=”max_error” which is now deprecated.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29462">#29462</a> by <a class="reference external" href="https://github.com/artificialfintelligence">Farid “Freddie” Taba</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-warning">API Change</span></span>  the <code class="docutils literal notranslate"><span class="pre">assert_all_finite</span></code> parameter of functions
+<code class="xref py py-func docutils literal notranslate"><span class="pre">metrics.pairwise.check_pairwise_arrays</span></code> and <a class="reference internal" href="../modules/generated/sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances" title="sklearn.metrics.pairwise_distances"><code class="xref py py-func docutils literal notranslate"><span class="pre">metrics.pairwise_distances</span></code></a>
+is renamed into <code class="docutils literal notranslate"><span class="pre">ensure_all_finite</span></code>. <code class="docutils literal notranslate"><span class="pre">force_all_finite</span></code> will be removed in 1.8.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29404">#29404</a> by <a class="reference external" href="https://github.com/jeremiedb">Jérémie du Boisberranger</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-model-selection">
+<h4><a class="reference internal" href="../api/sklearn.model_selection.html#module-sklearn.model_selection" title="sklearn.model_selection"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.model_selection</span></code></a><a class="headerlink" href="#sklearn-model-selection" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  Add the parameter <code class="docutils literal notranslate"><span class="pre">prefit</span></code> to
+<a class="reference internal" href="../modules/generated/sklearn.model_selection.FixedThresholdClassifier.html#sklearn.model_selection.FixedThresholdClassifier" title="sklearn.model_selection.FixedThresholdClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">model_selection.FixedThresholdClassifier</span></code></a> allowing the use of a pre-fitted
+estimator without re-fitting it.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29067">#29067</a> by <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-danger">Fix</span></span>  Improve error message when <a class="reference internal" href="../modules/generated/sklearn.model_selection.RepeatedStratifiedKFold.html#sklearn.model_selection.RepeatedStratifiedKFold.split" title="sklearn.model_selection.RepeatedStratifiedKFold.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">model_selection.RepeatedStratifiedKFold.split</span></code></a> is called without a <code class="docutils literal notranslate"><span class="pre">y</span></code> argument
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29402">#29402</a> by <a class="reference external" href="https://github.com/Anurag-Varma">Anurag Varma</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-neighbors">
+<h4><a class="reference internal" href="../api/sklearn.neighbors.html#module-sklearn.neighbors" title="sklearn.neighbors"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.neighbors</span></code></a><a class="headerlink" href="#sklearn-neighbors" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-danger">Fix</span></span>  <a class="reference internal" href="../modules/generated/sklearn.neighbors.LocalOutlierFactor.html#sklearn.neighbors.LocalOutlierFactor" title="sklearn.neighbors.LocalOutlierFactor"><code class="xref py py-class docutils literal notranslate"><span class="pre">neighbors.LocalOutlierFactor</span></code></a> raises a warning in the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method
+when duplicate values in the training data lead to inaccurate outlier detection.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28773">#28773</a> by <a class="reference external" href="https://github.com/HenriqueProj">Henrique Caroço</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-preprocessing">
+<h4><a class="reference internal" href="../api/sklearn.preprocessing.html#module-sklearn.preprocessing" title="sklearn.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.preprocessing</span></code></a><a class="headerlink" href="#sklearn-preprocessing" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  The HTML representation of <a class="reference internal" href="../modules/generated/sklearn.preprocessing.FunctionTransformer.html#sklearn.preprocessing.FunctionTransformer" title="sklearn.preprocessing.FunctionTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">preprocessing.FunctionTransformer</span></code></a>
+will show the function name in the label.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29158">#29158</a> by <a class="reference external" href="https://github.com/Charlie-XIAO">Yao Xiao</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-semi-supervised">
+<h4><a class="reference internal" href="../api/sklearn.semi_supervised.html#module-sklearn.semi_supervised" title="sklearn.semi_supervised"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.semi_supervised</span></code></a><a class="headerlink" href="#sklearn-semi-supervised" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-warning">API Change</span></span>  <a class="reference internal" href="../modules/generated/sklearn.semi_supervised.SelfTrainingClassifier.html#sklearn.semi_supervised.SelfTrainingClassifier" title="sklearn.semi_supervised.SelfTrainingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">semi_supervised.SelfTrainingClassifier</span></code></a>
+deprecated the <code class="docutils literal notranslate"><span class="pre">base_estimator</span></code> parameter in favor of <code class="docutils literal notranslate"><span class="pre">estimator</span></code>.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28494">#28494</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-tree">
+<h4><a class="reference internal" href="../api/sklearn.tree.html#module-sklearn.tree" title="sklearn.tree"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.tree</span></code></a><a class="headerlink" href="#sklearn-tree" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.tree.ExtraTreeClassifier.html#sklearn.tree.ExtraTreeClassifier" title="sklearn.tree.ExtraTreeClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">tree.ExtraTreeClassifier</span></code></a> and <a class="reference internal" href="../modules/generated/sklearn.tree.ExtraTreeRegressor.html#sklearn.tree.ExtraTreeRegressor" title="sklearn.tree.ExtraTreeRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">tree.ExtraTreeRegressor</span></code></a> now
+support missing-values in the data matrix <code class="docutils literal notranslate"><span class="pre">X</span></code>. Missing-values are handled by
+randomly moving all of the samples to the left, or right child node as the tree is
+traversed.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/27966">#27966</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a>.</p></li>
+</ul>
+</section>
+<section id="sklearn-utils">
+<h4><a class="reference internal" href="../api/sklearn.utils.html#module-sklearn.utils" title="sklearn.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.utils</span></code></a><a class="headerlink" href="#sklearn-utils" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-warning">API Change</span></span>  the <code class="docutils literal notranslate"><span class="pre">assert_all_finite</span></code> parameter of functions <a class="reference internal" href="../modules/generated/sklearn.utils.check_array.html#sklearn.utils.check_array" title="sklearn.utils.check_array"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.check_array</span></code></a>,
+<a class="reference internal" href="../modules/generated/sklearn.utils.check_X_y.html#sklearn.utils.check_X_y" title="sklearn.utils.check_X_y"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.check_X_y</span></code></a>, <a class="reference internal" href="../modules/generated/sklearn.utils.as_float_array.html#sklearn.utils.as_float_array" title="sklearn.utils.as_float_array"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.as_float_array</span></code></a> is renamed into
+<code class="docutils literal notranslate"><span class="pre">ensure_all_finite</span></code>. <code class="docutils literal notranslate"><span class="pre">force_all_finite</span></code> will be removed in 1.8.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29404">#29404</a> by <a class="reference external" href="https://github.com/jeremiedb">Jérémie du Boisberranger</a>.</p></li>
+</ul>
+<p class="rubric">Code and documentation contributors</p>
+<p>Thanks to everyone who has contributed to the maintenance and improvement of
+the project since version 1.5, including:</p>
+<p>TODO: update at the time of the release.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  <div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item">
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../whats_new.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Release History</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="v1.5.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Version 1.5</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+                </footer>
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-6-0">Version 1.6.0</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#support-for-array-api">Support for Array API</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata-routing">Metadata Routing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropping-support-for-building-with-setuptools">Dropping support for building with setuptools</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropping-official-support-for-pypy">Dropping official support for PyPy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog">Changelog</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-base"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.base</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-cluster"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.cluster</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-compose"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.compose</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.datasets</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-discriminant-analysis"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.discriminant_analysis</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-ensemble"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.ensemble</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-impute"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.impute</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-linear-model"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.linear_model</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-manifold"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.manifold</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.metrics</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-model-selection"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.model_selection</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-neighbors"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.neighbors</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.preprocessing</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-semi-supervised"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.semi_supervised</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-tree"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.tree</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.utils</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/whats_new/v1.6.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2007 - 2024, scikit-learn developers (BSD License).
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>
