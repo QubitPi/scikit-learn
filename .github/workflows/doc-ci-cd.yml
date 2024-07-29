@@ -20,14 +20,42 @@ jobs:
           python-version: "3.9"
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_gallery sphinx-prompt sphinxext-opengraph
-          pip install scipy pandas seaborn memory_profiler Pillow pooch plotly matplotlib Cython numpy numpydoc scikit-image pytest
+          pip install sphinx
+          pip install sphinx_gallery
+          pip install sphinx-prompt
+          pip install sphinxext-opengraph
+          pip install sphinx-copybutton
+          pip install pydata-sphinx-theme
+          pip install sphinxcontrib-sass
+          pip install sphinx-design
+          pip install sphinx-remove-toctrees
+          pip install sphinx-gallery
+          pip install scipy
+          pip install pandas
+          pip install seaborn
+          pip install memory_profiler
+          pip install Pillow
+          pip install pooch
+          pip install plotly
+          pip install matplotlib
+          pip install Cython
+          pip install numpy
+          pip install numpydoc
+          pip install scikit-image
+          pip install pytest
+          pip install matplotlib
+          pip install Pillow
+          pip install pandas
+          pip install polars
+          pip install packaging
       - name: Install scikit-learn from source
         run: pip install .
       - name: Build docs
-        run: make doc
+        run: make html
+        working-directory: doc
+      - name: Load CNAME
+        run: echo scikit-learn.qubitpi.org > doc/_build/html/stable/CNAME
       - name: Deploy docs to GitHub Pages
-        if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
