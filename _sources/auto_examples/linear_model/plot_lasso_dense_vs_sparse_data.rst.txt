@@ -94,8 +94,8 @@ runtime with a dense data format.
 
  .. code-block:: none
 
-    Sparse Lasso done in 0.082s
-    Dense Lasso done in 0.024s
+    Sparse Lasso done in 0.080s
+    Dense Lasso done in 0.027s
     Distance between coefficients : 8.76e-14
 
 
@@ -151,8 +151,8 @@ expect the implementation that uses the sparse data format to be faster.
  .. code-block:: none
 
     Matrix density : 0.626%
-    Sparse Lasso done in 0.099s
-    Dense Lasso done in  0.488s
+    Sparse Lasso done in 0.098s
+    Dense Lasso done in  0.496s
     Distance between coefficients : 8.21e-12
 
 
@@ -161,7 +161,7 @@ expect the implementation that uses the sparse data format to be faster.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.754 seconds)
+   **Total running time of the script:** (0 minutes 0.760 seconds)
 
 
 .. _sphx_glr_download_auto_examples_linear_model_plot_lasso_dense_vs_sparse_data.py:

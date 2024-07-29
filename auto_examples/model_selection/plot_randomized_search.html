@@ -1046,7 +1046,7 @@ time for randomized search is drastically lower.</p>
 due to a noise effect and would not carry over to a held-out test set.</p>
 <p>Note that in practice, one would not search over this many different parameters
 simultaneously using grid search, but pick only the ones deemed most important.</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>RandomizedSearchCV took 0.85 seconds for 15 candidates parameter settings.
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>RandomizedSearchCV took 0.81 seconds for 15 candidates parameter settings.
 Model with rank: 1
 Mean validation score: 0.991 (std: 0.006)
 Parameters: {&#39;alpha&#39;: np.float64(0.05063247886572012), &#39;average&#39;: False, &#39;l1_ratio&#39;: np.float64(0.13822072286080167)}
@@ -1059,7 +1059,7 @@ Model with rank: 3
 Mean validation score: 0.976 (std: 0.023)
 Parameters: {&#39;alpha&#39;: np.float64(0.727148206404819), &#39;average&#39;: False, &#39;l1_ratio&#39;: np.float64(0.25183501383331797)}
 
-GridSearchCV took 2.88 seconds for 60 candidate parameter settings.
+GridSearchCV took 2.74 seconds for 60 candidate parameter settings.
 Model with rank: 1
 Mean validation score: 0.993 (std: 0.011)
 Parameters: {&#39;alpha&#39;: np.float64(0.1), &#39;average&#39;: False, &#39;l1_ratio&#39;: np.float64(0.1111111111111111)}
@@ -1151,7 +1151,7 @@ Parameters: {&#39;alpha&#39;: np.float64(0.01), &#39;average&#39;: False, &#39;l
 <span class="n">report</span><span class="p">(</span><span class="n">grid_search</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.749 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.559 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-model-selection-plot-randomized-search-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/scikit-learn/scikit-learn/main?urlpath=lab/tree/notebooks/auto_examples/model_selection/plot_randomized_search.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo22.svg" style="width: 150px;" />
