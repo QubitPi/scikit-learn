@@ -72,7 +72,7 @@ randomly) is also shown.
     Fitting model on a small sub-sample of the data
     done in 0.015s.
     Predicting color indices on the full image (k-means)
-    done in 0.009s.
+    done in 0.010s.
     Predicting color indices on the full image (random)
     done in 0.033s.
 
@@ -162,7 +162,7 @@ randomly) is also shown.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.338 seconds)
+   **Total running time of the script:** (0 minutes 0.344 seconds)
 
 
 .. _sphx_glr_download_auto_examples_cluster_plot_color_quantization.py:

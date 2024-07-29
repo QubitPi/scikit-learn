@@ -51,21 +51,21 @@ which is well known to have this percolation instability.
     *
 
       .. image-sg:: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_001.png
-         :alt: n_cluster=30, connectivity=False, linkage=average (time 0.03s), linkage=complete (time 0.02s), linkage=ward (time 0.02s), linkage=single (time 0.01s)
+         :alt: n_cluster=30, connectivity=False, linkage=average (time 0.03s), linkage=complete (time 0.02s), linkage=ward (time 0.03s), linkage=single (time 0.01s)
          :srcset: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_001.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_002.png
-         :alt: n_cluster=3, connectivity=False, linkage=average (time 0.02s), linkage=complete (time 0.02s), linkage=ward (time 0.02s), linkage=single (time 0.01s)
+         :alt: n_cluster=3, connectivity=False, linkage=average (time 0.02s), linkage=complete (time 0.02s), linkage=ward (time 0.03s), linkage=single (time 0.01s)
          :srcset: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_002.png
          :class: sphx-glr-multi-img
 
     *
 
       .. image-sg:: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_003.png
-         :alt: n_cluster=30, connectivity=True, linkage=average (time 0.08s), linkage=complete (time 0.08s), linkage=ward (time 0.10s), linkage=single (time 0.02s)
+         :alt: n_cluster=30, connectivity=True, linkage=average (time 0.08s), linkage=complete (time 0.08s), linkage=ward (time 0.11s), linkage=single (time 0.02s)
          :srcset: /auto_examples/cluster/images/sphx_glr_plot_agglomerative_clustering_003.png
          :class: sphx-glr-multi-img
 
@@ -145,7 +145,7 @@ which is well known to have this percolation instability.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.429 seconds)
+   **Total running time of the script:** (0 minutes 1.436 seconds)
 
 
 .. _sphx_glr_download_auto_examples_cluster_plot_agglomerative_clustering.py:
