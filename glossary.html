@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/styles/colors.css?v=cc94ab7d" />
     <link rel="stylesheet" type="text/css" href="_static/styles/custom.css?v=e4cb1417" />
   
@@ -655,7 +655,7 @@ are not assured to be stable.</p>
 </dd>
 <dt id="term-array-like">array-like<a class="headerlink" href="#term-array-like" title="Link to this term">#</a></dt><dd><p>The most common data format for <em>input</em> to Scikit-learn estimators and
 functions, array-like is any type object for which
-<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.asarray.html#numpy.asarray" title="(in NumPy v2.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.asarray</span></code></a> will produce an array of appropriate shape
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.asarray.html#numpy.asarray" title="(in NumPy v2.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.asarray</span></code></a> will produce an array of appropriate shape
 (usually 1 or 2-dimensional) of appropriate dtype (usually numeric).</p>
 <p>This includes:</p>
 <ul class="simple">
@@ -1072,7 +1072,7 @@ than each training portion in a cross validation split.</p>
 </dd>
 <dt id="term-memmapping">memmapping<a class="headerlink" href="#term-memmapping" title="Link to this term">#</a></dt><dt id="term-memory-map">memory map<a class="headerlink" href="#term-memory-map" title="Link to this term">#</a></dt><dt id="term-memory-mapping">memory mapping<a class="headerlink" href="#term-memory-mapping" title="Link to this term">#</a></dt><dd><p>A memory efficiency strategy that keeps data on disk rather than
 copying it into main memory.  Memory maps can be created for arrays
-that can be read, written, or both, using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.memmap.html#numpy.memmap" title="(in NumPy v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.memmap</span></code></a>. When
+that can be read, written, or both, using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.memmap.html#numpy.memmap" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.memmap</span></code></a>. When
 using <a class="reference internal" href="#term-joblib"><span class="xref std std-term">joblib</span></a> to parallelize operations in Scikit-learn, it
 may automatically memmap large arrays to reduce memory duplication
 overhead in multiprocessing.</p>
@@ -1172,7 +1172,7 @@ kernel functions (a constrained class of similarity functions) in
 matrices that are symmetric and hence store data redundantly.</p>
 <p>See also <a class="reference internal" href="#term-precomputed"><span class="xref std std-term">precomputed</span></a> and <a class="reference internal" href="#term-metric"><span class="xref std std-term">metric</span></a>.</p>
 <p>Note that for most distance metrics, we rely on implementations from
-<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/spatial.distance.html#module-scipy.spatial.distance" title="(in SciPy v1.14.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scipy.spatial.distance</span></code></a>, but may reimplement for efficiency in
+<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/spatial.distance.html#module-scipy.spatial.distance" title="(in SciPy v1.14.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scipy.spatial.distance</span></code></a>, but may reimplement for efficiency in
 our context. The <a class="reference internal" href="modules/generated/sklearn.metrics.DistanceMetric.html#sklearn.metrics.DistanceMetric" title="sklearn.metrics.DistanceMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">metrics.DistanceMetric</span></code></a> interface is used to implement
 distance metrics for integration with efficient neighbors search.</p>
 </dd>
@@ -1239,7 +1239,7 @@ to <a class="reference internal" href="#term-unlabeled"><span class="xref std st
 </dd>
 <dt id="term-sparse-matrix">sparse matrix<a class="headerlink" href="#term-sparse-matrix" title="Link to this term">#</a></dt><dt id="term-sparse-graph">sparse graph<a class="headerlink" href="#term-sparse-graph" title="Link to this term">#</a></dt><dd><p>A representation of two-dimensional numeric data that is more memory
 efficient the corresponding dense numpy array where almost all elements
-are zero. We use the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/sparse.html#module-scipy.sparse" title="(in SciPy v1.14.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scipy.sparse</span></code></a> framework, which provides
+are zero. We use the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/sparse.html#module-scipy.sparse" title="(in SciPy v1.14.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scipy.sparse</span></code></a> framework, which provides
 several underlying sparse data representations, or <em>formats</em>.
 Some formats are more efficient than others for particular tasks, and
 when a particular format provides especial benefit, we try to document
@@ -1257,7 +1257,7 @@ interpretation most often adopted, e.g. when sparse matrices
 are used for feature matrices or <a class="reference internal" href="#term-multilabel-indicator-matrices"><span class="xref std std-term">multilabel indicator
 matrices</span></a>.</p>
 </dd>
-<dt>graph semantics</dt><dd><p>As with <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/sparse.csgraph.html#module-scipy.sparse.csgraph" title="(in SciPy v1.14.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scipy.sparse.csgraph</span></code></a>, explicit zeros are
+<dt>graph semantics</dt><dd><p>As with <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/sparse.csgraph.html#module-scipy.sparse.csgraph" title="(in SciPy v1.14.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scipy.sparse.csgraph</span></code></a>, explicit zeros are
 interpreted as the number 0, but implicit zeros indicate a masked
 or absent value, such as the absence of an edge between two
 vertices of a graph, where an explicit value indicates an edge’s
@@ -1361,7 +1361,7 @@ model is estimated as a deterministic function of:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#term-parameters"><span class="xref std std-term">parameters</span></a> provided in object construction or with
 <a class="reference internal" href="#term-set_params"><span class="xref std std-term">set_params</span></a>;</p></li>
-<li><p>the global <a class="reference external" href="https://numpy.org/doc/stable/reference/random/index.html#module-numpy.random" title="(in NumPy v2.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.random</span></code></a> random state if the estimator’s
+<li><p>the global <a class="reference external" href="https://numpy.org/doc/stable/reference/random/index.html#module-numpy.random" title="(in NumPy v2.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.random</span></code></a> random state if the estimator’s
 <a class="reference internal" href="#term-random_state"><span class="xref std std-term">random_state</span></a> parameter is set to None; and</p></li>
 <li><p>any data or <a class="reference internal" href="#term-sample-properties"><span class="xref std std-term">sample properties</span></a> passed to the most recent
 call to <a class="reference internal" href="#term-fit"><span class="xref std std-term">fit</span></a>, <a class="reference internal" href="#term-fit_transform"><span class="xref std std-term">fit_transform</span></a> or <a class="reference internal" href="#term-fit_predict"><span class="xref std std-term">fit_predict</span></a>,
@@ -1989,7 +1989,7 @@ results returned by the function (<a class="reference internal" href="#term-fit"
 other function like <a class="reference internal" href="modules/generated/sklearn.cluster.k_means.html#sklearn.cluster.k_means" title="sklearn.cluster.k_means"><code class="xref py py-func docutils literal notranslate"><span class="pre">k_means</span></code></a>). <code class="docutils literal notranslate"><span class="pre">random_state</span></code>’s
 value may be:</p>
 <dl class="simple">
-<dt>None (default)</dt><dd><p>Use the global random state instance from <a class="reference external" href="https://numpy.org/doc/stable/reference/random/index.html#module-numpy.random" title="(in NumPy v2.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.random</span></code></a>.
+<dt>None (default)</dt><dd><p>Use the global random state instance from <a class="reference external" href="https://numpy.org/doc/stable/reference/random/index.html#module-numpy.random" title="(in NumPy v2.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.random</span></code></a>.
 Calling the function multiple times will reuse
 the same instance, and will produce different results.</p>
 </dd>
@@ -2001,14 +2001,14 @@ number of different distinct random seeds. Popular integer
 random seeds are 0 and <a class="reference external" href="https://en.wikipedia.org/wiki/Answer_to_the_Ultimate_Question_of_Life%2C_the_Universe%2C_and_Everything">42</a>.
 Integer values must be in the range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">2**32</span> <span class="pre">-</span> <span class="pre">1]</span></code>.</p>
 </dd>
-<dt>A <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.random.RandomState</span></code></a> instance</dt><dd><p>Use the provided random state, only affecting other users
+<dt>A <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.random.RandomState</span></code></a> instance</dt><dd><p>Use the provided random state, only affecting other users
 of that same random state instance. Calling the function
 multiple times will reuse the same instance, and
 will produce different results.</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="modules/generated/sklearn.utils.check_random_state.html#sklearn.utils.check_random_state" title="sklearn.utils.check_random_state"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.check_random_state</span></code></a> is used internally to validate the
-input <code class="docutils literal notranslate"><span class="pre">random_state</span></code> and return a <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">RandomState</span></code></a>
+input <code class="docutils literal notranslate"><span class="pre">random_state</span></code> and return a <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">RandomState</span></code></a>
 instance.</p>
 <p>For more details on how to control the randomness of scikit-learn
 objects and avoid common pitfalls, you may refer to <a class="reference internal" href="common_pitfalls.html#randomness"><span class="std std-ref">Controlling randomness</span></a>.</p>

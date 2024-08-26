@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/api.css?v=b0444f25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/colors.css?v=cc94ab7d" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/custom.css?v=e4cb1417" />
@@ -1321,7 +1321,7 @@ document.write(`
 <h1>calinski_harabasz_score<a class="headerlink" href="#calinski-harabasz-score" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sklearn.metrics.calinski_harabasz_score">
-<span class="sig-prename descclassname"><span class="pre">sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">calinski_harabasz_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/7eacdef/sklearn/metrics/cluster/_unsupervised.py#L319"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.metrics.calinski_harabasz_score" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">calinski_harabasz_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/02e45ce/sklearn/metrics/cluster/_unsupervised.py#L319"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.metrics.calinski_harabasz_score" title="Link to this definition">#</a></dt>
 <dd><p>Compute the Calinski and Harabasz score.</p>
 <p>It is also known as the Variance Ratio Criterion.</p>
 <p>The score is defined as ratio of the sum of between-cluster dispersion and
@@ -1359,7 +1359,7 @@ analysis”. Communications in Statistics</a></p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">calinski_harabasz_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
-<span class="go">114.8...</span>
+<span class="go">np.float64(114.8...)</span>
 </pre></div>
 </div>
 </dd></dl>

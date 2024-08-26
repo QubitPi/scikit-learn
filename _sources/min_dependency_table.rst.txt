@@ -74,7 +74,7 @@
     - tests
 
   * - polars
-    - 0.20.23
+    - 0.20.30
     - docs, tests
 
   * - pyarrow

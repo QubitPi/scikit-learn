@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/colors.css?v=cc94ab7d" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css?v=e4cb1417" />
   
@@ -873,6 +873,11 @@ the first iteration. Only some of these candidates are selected for the next
 iteration, which will be allocated more resources. For parameter tuning, the
 resource is typically the number of training samples, but it can also be an
 arbitrary numeric parameter such as <code class="docutils literal notranslate"><span class="pre">n_estimators</span></code> in a random forest.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The resource increase chosen should be large enough so that a large improvement
+in scores is obtained when taking into account statistical significance.</p>
+</div>
 <p>As illustrated in the figure below, only a subset of candidates
 ‘survive’ until the last iteration. These are the candidates that have
 consistently ranked among the top-scoring candidates across all iterations.

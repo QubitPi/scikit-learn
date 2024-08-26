@@ -189,7 +189,7 @@ Bonus: how much can you trust the selection of alpha?
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.482 seconds)
+   **Total running time of the script:** (0 minutes 0.487 seconds)
 
 
 .. _sphx_glr_download_auto_examples_exercises_plot_cv_diabetes.py:

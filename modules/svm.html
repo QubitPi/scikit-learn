@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/colors.css?v=cc94ab7d" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css?v=e4cb1417" />
   
@@ -815,7 +815,8 @@ classifiers are constructed and each one trains data from two classes.
 To provide a consistent interface with other classifiers, the
 <code class="docutils literal notranslate"><span class="pre">decision_function_shape</span></code> option allows to monotonically transform the
 results of the “one-versus-one” classifiers to a “one-vs-rest” decision
-function of shape <code class="docutils literal notranslate"><span class="pre">(n_samples,</span> <span class="pre">n_classes)</span></code>.</p>
+function of shape <code class="docutils literal notranslate"><span class="pre">(n_samples,</span> <span class="pre">n_classes)</span></code>, which is the default setting
+of the parameter (default=’ovr’).</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">decision_function_shape</span><span class="o">=</span><span class="s1">&#39;ovo&#39;</span><span class="p">)</span>

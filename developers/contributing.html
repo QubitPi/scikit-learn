@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/colors.css?v=cc94ab7d" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css?v=e4cb1417" />
   
@@ -1050,8 +1050,9 @@ workflow, please pay a visit to the <a class="reference external" href="http://s
 and the <a class="reference external" href="https://astropy.readthedocs.io/en/latest/development/workflow/development_workflow.html">Astropy Workflow for Developers</a>
 sections.</p>
 </div>
+</section>
 <section id="continuous-integration-ci">
-<h4>Continuous Integration (CI)<a class="headerlink" href="#continuous-integration-ci" title="Link to this heading">#</a></h4>
+<h3>Continuous Integration (CI)<a class="headerlink" href="#continuous-integration-ci" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Azure pipelines are used for testing scikit-learn on Linux, Mac and Windows,
 with different dependencies and settings.</p></li>
@@ -1060,13 +1061,17 @@ with different dependencies and settings.</p></li>
 source distributions.</p></li>
 <li><p>Cirrus CI is used to build on ARM.</p></li>
 </ul>
+<section id="commit-message-markers">
+<span id="commit-markers"></span><h4>Commit message markers<a class="headerlink" href="#commit-message-markers" title="Link to this heading">#</a></h4>
 <p>Please note that if one of the following markers appear in the latest commit
 message, the following actions are taken.</p>
 <div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p>Commit Message Marker</p></td>
-<td><p>Action Taken by CI</p></td>
+<thead>
+<tr class="row-odd"><th class="head"><p>Commit Message Marker</p></th>
+<th class="head"><p>Action Taken by CI</p></th>
 </tr>
+</thead>
+<tbody>
 <tr class="row-even"><td><p>[ci skip]</p></td>
 <td><p>CI is skipped completely</p></td>
 </tr>
@@ -1115,8 +1120,33 @@ message, the following actions are taken.</p>
 <p>Note that, by default, the documentation is built but only the examples
 that are directly modified by the pull request are executed.</p>
 </section>
+<section id="lock-files">
+<h4>Lock files<a class="headerlink" href="#lock-files" title="Link to this heading">#</a></h4>
+<p>CIs use lock files to build environments with specific versions of dependencies. When a
+PR needs to modify the dependencies or their versions, the lock files should be updated
+accordingly. This can be done by commenting in the PR:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>@scikit-learn-bot update lock-files
+</pre></div>
+</div>
+<p>A bot will push a commit to your PR branch with the updated lock files in a few minutes.
+Make sure to tick the <em>Allow edits from maintainers</em> checkbox located at the bottom of
+the right sidebar of the PR. You can also specify the options <code class="docutils literal notranslate"><span class="pre">--select-build</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--skip-build</span></code>, and <code class="docutils literal notranslate"><span class="pre">--select-tag</span></code> as in a command line. Use <code class="docutils literal notranslate"><span class="pre">--help</span></code> on the script
+<code class="docutils literal notranslate"><span class="pre">build_tools/update_environments_and_lock_files.py</span></code> for more information. For example,</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>@scikit-learn-bot update lock-files --select-tag main-ci --skip-build doc
+</pre></div>
+</div>
+<p>The bot will automatically add <a class="reference internal" href="#commit-markers"><span class="std std-ref">commit message markers</span></a> to the
+commit for certain tags. If you want to add more markers manually, you can do so using
+the <code class="docutils literal notranslate"><span class="pre">--commit-marker</span></code> option. For example, the following comment will trigger the bot to
+update documentation-related lock files and add the <code class="docutils literal notranslate"><span class="pre">[doc</span> <span class="pre">build]</span></code> marker to the commit:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>@scikit-learn-bot update lock-files --select-build doc --commit-marker &quot;[doc build]&quot;
+</pre></div>
+</div>
+</section>
+</section>
 <section id="stalled-pull-requests">
-<span id="stalled-pull-request"></span><h4>Stalled pull requests<a class="headerlink" href="#stalled-pull-requests" title="Link to this heading">#</a></h4>
+<span id="stalled-pull-request"></span><h3>Stalled pull requests<a class="headerlink" href="#stalled-pull-requests" title="Link to this heading">#</a></h3>
 <p>As contributing a feature can be a lengthy process, some
 pull requests appear inactive but unfinished. In such a case, taking
 them over is a great service for the project. A good etiquette to take over is:</p>
@@ -1147,7 +1177,7 @@ old one.</p></li>
 </ul>
 </section>
 <section id="stalled-and-unclaimed-issues">
-<h4>Stalled and Unclaimed Issues<a class="headerlink" href="#stalled-and-unclaimed-issues" title="Link to this heading">#</a></h4>
+<h3>Stalled and Unclaimed Issues<a class="headerlink" href="#stalled-and-unclaimed-issues" title="Link to this heading">#</a></h3>
 <p>Generally speaking, issues which are up for grabs will have a
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/labels/help%20wanted">“help wanted”</a>.
 tag. However, not all issues which need contributors will have this tag,
@@ -1174,7 +1204,6 @@ we recommend that contributors follow the procedure
 described in the <a class="reference internal" href="#stalled-pull-request"><span class="std std-ref">Stalled pull requests</span></a>
 section rather than working directly on the issue.</p></li>
 </ul>
-</section>
 </section>
 <section id="issues-for-new-contributors">
 <span id="new-contributors"></span><h3>Issues for New Contributors<a class="headerlink" href="#issues-for-new-contributors" title="Link to this heading">#</a></h3>
@@ -1879,7 +1908,7 @@ is performed, especially at the beginning of the <a class="reference internal" h
 Sometimes, only a very small portion of the code is doing the actual job.
 For example looking at the <a class="reference internal" href="../modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression.fit" title="sklearn.linear_model.LinearRegression.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit</span></code></a> method of
 <a class="reference internal" href="../modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression" title="sklearn.linear_model.LinearRegression"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinearRegression</span></code></a>, what you’re looking for
-might just be the call the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.lstsq.html#scipy.linalg.lstsq" title="(in SciPy v1.14.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.linalg.lstsq</span></code></a>, but it is buried into
+might just be the call the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.lstsq.html#scipy.linalg.lstsq" title="(in SciPy v1.14.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.linalg.lstsq</span></code></a>, but it is buried into
 multiple lines of input checking and the handling of different kinds of
 parameters.</p></li>
 <li><p>Due to the use of <a class="reference external" href="https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)">Inheritance</a>,
@@ -1984,12 +2013,14 @@ variable) in the code base.</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-code">Contributing code</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#video-resources">Video resources</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute">How to contribute</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-request-checklist">Pull request checklist</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration-ci">Continuous Integration (CI)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stalled-pull-requests">Stalled pull requests</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stalled-and-unclaimed-issues">Stalled and Unclaimed Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-request-checklist">Pull request checklist</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration-ci">Continuous Integration (CI)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-message-markers">Commit message markers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lock-files">Lock files</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stalled-pull-requests">Stalled pull requests</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stalled-and-unclaimed-issues">Stalled and Unclaimed Issues</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issues-for-new-contributors">Issues for New Contributors</a></li>
 </ul>
 </li>

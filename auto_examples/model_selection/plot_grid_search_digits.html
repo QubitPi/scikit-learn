@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/colors.css?v=cc94ab7d" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/custom.css?v=e4cb1417" />
   
@@ -1246,15 +1246,15 @@ The selected final model is the fastest to predict out of the previously
 selected subset of best models based on precision and recall.
 Its scoring time is:
 
-mean_score_time                                          0.004213
-mean_test_recall                                         0.877206
-std_test_recall                                          0.069196
-mean_test_precision                                           1.0
-std_test_precision                                            0.0
-rank_test_recall                                                3
-rank_test_precision                                             1
-params                 {&#39;C&#39;: 10, &#39;gamma&#39;: 0.001, &#39;kernel&#39;: &#39;rbf&#39;}
-Name: 2, dtype: object
+mean_score_time                                            0.004496
+mean_test_recall                                           0.877206
+std_test_recall                                            0.069196
+mean_test_precision                                             1.0
+std_test_precision                                              0.0
+rank_test_recall                                                  3
+rank_test_precision                                               1
+params                 {&#39;C&#39;: 1000, &#39;gamma&#39;: 0.001, &#39;kernel&#39;: &#39;rbf&#39;}
+Name: 6, dtype: object
 </pre></div>
 </div>
 <div class="output_subarea output_html rendered_html output_result">
@@ -1677,20 +1677,20 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
              param_grid=[{&#x27;C&#x27;: [1, 10, 100, 1000], &#x27;gamma&#x27;: [0.001, 0.0001],
                           &#x27;kernel&#x27;: [&#x27;rbf&#x27;]},
                          {&#x27;C&#x27;: [1, 10, 100, 1000], &#x27;kernel&#x27;: [&#x27;linear&#x27;]}],
-             refit=&lt;function refit_strategy at 0x7fd0ece20b80&gt;,
+             refit=&lt;function refit_strategy at 0x7f4735fb0c10&gt;,
              scoring=[&#x27;precision&#x27;, &#x27;recall&#x27;])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-228" type="checkbox" ><label for="sk-estimator-id-228" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>GridSearchCV</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/dev/modules/generated/sklearn.model_selection.GridSearchCV.html">?<span>Documentation for GridSearchCV</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>GridSearchCV(estimator=SVC(),
              param_grid=[{&#x27;C&#x27;: [1, 10, 100, 1000], &#x27;gamma&#x27;: [0.001, 0.0001],
                           &#x27;kernel&#x27;: [&#x27;rbf&#x27;]},
                          {&#x27;C&#x27;: [1, 10, 100, 1000], &#x27;kernel&#x27;: [&#x27;linear&#x27;]}],
-             refit=&lt;function refit_strategy at 0x7fd0ece20b80&gt;,
-             scoring=[&#x27;precision&#x27;, &#x27;recall&#x27;])</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-229" type="checkbox" ><label for="sk-estimator-id-229" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>best_estimator_: SVC</div></div></label><div class="sk-toggleable__content fitted"><pre>SVC(C=10, gamma=0.001)</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-230" type="checkbox" ><label for="sk-estimator-id-230" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>SVC</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/dev/modules/generated/sklearn.svm.SVC.html">?<span>Documentation for SVC</span></a></div></label><div class="sk-toggleable__content fitted"><pre>SVC(C=10, gamma=0.001)</pre></div> </div></div></div></div></div></div></div></div></div>
+             refit=&lt;function refit_strategy at 0x7f4735fb0c10&gt;,
+             scoring=[&#x27;precision&#x27;, &#x27;recall&#x27;])</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-229" type="checkbox" ><label for="sk-estimator-id-229" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>best_estimator_: SVC</div></div></label><div class="sk-toggleable__content fitted"><pre>SVC(C=1000, gamma=0.001)</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-230" type="checkbox" ><label for="sk-estimator-id-230" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>SVC</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/dev/modules/generated/sklearn.svm.SVC.html">?<span>Documentation for SVC</span></a></div></label><div class="sk-toggleable__content fitted"><pre>SVC(C=1000, gamma=0.001)</pre></div> </div></div></div></div></div></div></div></div></div>
 </div>
 <br />
 <br /><p>The parameters selected by the grid-search with our custom strategy are:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;C&#39;: 10, &#39;gamma&#39;: 0.001, &#39;kernel&#39;: &#39;rbf&#39;}
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;C&#39;: 1000, &#39;gamma&#39;: 0.001, &#39;kernel&#39;: &#39;rbf&#39;}
 </pre></div>
 </div>
 <p>Finally, we evaluate the fine-tuned model on the left-out evaluation set: the
@@ -1719,7 +1719,7 @@ weighted avg       0.99      0.99      0.99       899
 <p>The problem is too easy: the hyperparameter plateau is too flat and the
 output model is the same for precision and recall with ties in quality.</p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 8.075 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 8.085 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-model-selection-plot-grid-search-digits-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/scikit-learn/scikit-learn/main?urlpath=lab/tree/notebooks/auto_examples/model_selection/plot_grid_search_digits.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo22.svg" style="width: 150px;" />

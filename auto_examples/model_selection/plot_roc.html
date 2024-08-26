@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/colors.css?v=cc94ab7d" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/custom.css?v=e4cb1417" />
   
@@ -1174,10 +1174,10 @@ flowers as either “virginica” (<code class="docutils literal notranslate"><s
 <section id="roc-curve-using-micro-averaged-ovr">
 <h3>ROC curve using micro-averaged OvR<a class="headerlink" href="#roc-curve-using-micro-averaged-ovr" title="Link to this heading">#</a></h3>
 <p>Micro-averaging aggregates the contributions from all the classes (using
-<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ravel.html#numpy.ravel" title="(in NumPy v2.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.ravel</span></code></a>) to compute the average metrics as follows:</p>
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ravel.html#numpy.ravel" title="(in NumPy v2.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.ravel</span></code></a>) to compute the average metrics as follows:</p>
 <p><span class="math notranslate nohighlight">\(TPR=\frac{\sum_{c}TP_c}{\sum_{c}(TP_c + FN_c)}\)</span> ;</p>
 <p><span class="math notranslate nohighlight">\(FPR=\frac{\sum_{c}FP_c}{\sum_{c}(FP_c + TN_c)}\)</span> .</p>
-<p>We can briefly demo the effect of <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ravel.html#numpy.ravel" title="(in NumPy v2.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.ravel</span></code></a>:</p>
+<p>We can briefly demo the effect of <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ravel.html#numpy.ravel" title="(in NumPy v2.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.ravel</span></code></a>:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y_score:</span><span class="se">\n</span><span class="si">{</span><span class="n">y_score</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,:]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y_score.ravel():</span><span class="se">\n</span><span class="si">{</span><span class="n">y_score</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,:]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1499,7 +1499,7 @@ averaging strategy.</p>
 counts are pooled. The macro-averaged alternative better reflects the
 statistics of the less frequent classes, and then is more appropriate when
 performance on all the classes is deemed equally important.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.556 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.573 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-model-selection-plot-roc-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/scikit-learn/scikit-learn/main?urlpath=lab/tree/notebooks/auto_examples/model_selection/plot_roc.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo22.svg" style="width: 150px;" />

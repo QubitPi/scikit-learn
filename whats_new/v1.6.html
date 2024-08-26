@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/colors.css?v=cc94ab7d" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css?v=e4cb1417" />
   
@@ -707,6 +707,13 @@ and <a class="reference external" href="https://github.com/scikit-learn/scikit-l
 compatible inputs when their base estimators do. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/27096">#27096</a> by <a class="reference external" href="https://github.com/betatim">Tim
 Head</a> and <a class="reference external" href="https://github.com/ogrisel">Olivier Grisel</a>.</p></li>
 </ul>
+<p><strong>Other</strong></p>
+<ul class="simple">
+<li><p>Support for the soon to be deprecated <code class="docutils literal notranslate"><span class="pre">cupy.array_api</span></code> module has been
+removed in favor of directly supporting the top level <code class="docutils literal notranslate"><span class="pre">cupy</span></code> module, possibly
+via the <code class="docutils literal notranslate"><span class="pre">array_api_compat.cupy</span></code> compatibility wrapper. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29639">#29639</a> by
+<a class="reference external" href="https://github.com/ogrisel">Olivier Grisel</a>.</p></li>
+</ul>
 </section>
 <section id="metadata-routing">
 <h3>Metadata Routing<a class="headerlink" href="#metadata-routing" title="Link to this heading">#</a></h3>
@@ -725,6 +732,10 @@ more details.</p>
 routing in its <code class="docutils literal notranslate"><span class="pre">fit</span></code> and <code class="docutils literal notranslate"><span class="pre">predict</span></code> methods and routes the corresponding
 params to the underlying regressor.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29136">#29136</a> by <a class="reference external" href="https://github.com/OmarManzoor">Omar Salman</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html#sklearn.feature_selection.SequentialFeatureSelector" title="sklearn.feature_selection.SequentialFeatureSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">feature_selection.SequentialFeatureSelector</span></code></a> now supports
+metadata routing in its <code class="docutils literal notranslate"><span class="pre">fit</span></code> method and passes the corresponding params to
+the <a class="reference internal" href="../modules/generated/sklearn.model_selection.cross_val_score.html#sklearn.model_selection.cross_val_score" title="sklearn.model_selection.cross_val_score"><code class="xref py py-func docutils literal notranslate"><span class="pre">model_selection.cross_val_score</span></code></a> function.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29260">#29260</a> by <a class="reference external" href="https://github.com/OmarManzoor">Omar Salman</a>.</p></li>
 <li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.model_selection.validation_curve.html#sklearn.model_selection.validation_curve" title="sklearn.model_selection.validation_curve"><code class="xref py py-func docutils literal notranslate"><span class="pre">model_selection.validation_curve</span></code></a> now supports metadata routing for
 the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method of its estimator and for its underlying CV splitter and scorer.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29329">#29329</a> by <a class="reference external" href="https://github.com/StefanieSenger">Stefanie Senger</a>.</p></li>
@@ -738,6 +749,9 @@ passed to the underlying estimators via their respective methods.
 <li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.model_selection.permutation_test_score.html#sklearn.model_selection.permutation_test_score" title="sklearn.model_selection.permutation_test_score"><code class="xref py py-func docutils literal notranslate"><span class="pre">model_selection.permutation_test_score</span></code></a> now supports metadata routing
 for the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method of its estimator and for its underlying CV splitter and scorer.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29266">#29266</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.feature_selection.RFE.html#sklearn.feature_selection.RFE" title="sklearn.feature_selection.RFE"><code class="xref py py-class docutils literal notranslate"><span class="pre">feature_selection.RFE</span></code></a> and <a class="reference internal" href="../modules/generated/sklearn.feature_selection.RFECV.html#sklearn.feature_selection.RFECV" title="sklearn.feature_selection.RFECV"><code class="xref py py-class docutils literal notranslate"><span class="pre">feature_selection.RFECV</span></code></a>
+now support metadata routing.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29312">#29312</a> by <a class="reference external" href="https://github.com/OmarManzoor">Omar Salman</a>.</p></li>
 </ul>
 </section>
 <section id="dropping-support-for-building-with-setuptools">
@@ -790,6 +804,14 @@ and automatic retries in case of HTTP errors. <a class="reference external" href
 Grisel</a>.</p></li>
 </ul>
 </section>
+<section id="sklearn-decomposition">
+<h4><a class="reference internal" href="../api/sklearn.decomposition.html#module-sklearn.decomposition" title="sklearn.decomposition"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.decomposition</span></code></a><a class="headerlink" href="#sklearn-decomposition" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-danger">Fix</span></span>  Increase rank defficiency threshold in the whitening step of
+<a class="reference internal" href="../modules/generated/sklearn.decomposition.FastICA.html#sklearn.decomposition.FastICA" title="sklearn.decomposition.FastICA"><code class="xref py py-class docutils literal notranslate"><span class="pre">decomposition.FastICA</span></code></a> with <code class="docutils literal notranslate"><span class="pre">whiten_solver=&quot;eigh&quot;</span></code> to improve the
+platform-agnosticity of the estimator. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29612">#29612</a> by <a class="reference external" href="https://github.com/ogrisel">Olivier Grisel</a>.</p></li>
+</ul>
+</section>
 <section id="sklearn-discriminant-analysis">
 <h4><a class="reference internal" href="../api/sklearn.discriminant_analysis.html#module-sklearn.discriminant_analysis" title="sklearn.discriminant_analysis"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.discriminant_analysis</span></code></a><a class="headerlink" href="#sklearn-discriminant-analysis" title="Link to this heading">#</a></h4>
 <ul class="simple">
@@ -803,8 +825,9 @@ can be silenced using the <code class="docutils literal notranslate"><span class
 <h4><a class="reference internal" href="../api/sklearn.ensemble.html#module-sklearn.ensemble" title="sklearn.ensemble"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.ensemble</span></code></a><a class="headerlink" href="#sklearn-ensemble" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><span class="raw-html"><span class="badge text-bg-info">Efficiency</span></span>  Small runtime improvement of fitting
-<a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html#sklearn.ensemble.HistGradientBoostingClassifier" title="sklearn.ensemble.HistGradientBoostingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingClassifier</span></code></a> and <a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html#sklearn.ensemble.HistGradientBoostingRegressor" title="sklearn.ensemble.HistGradientBoostingRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingRegressor</span></code></a>
-by parallelizing the initial search for bin thresholds
+<a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html#sklearn.ensemble.HistGradientBoostingClassifier" title="sklearn.ensemble.HistGradientBoostingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingClassifier</span></code></a> and
+<a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html#sklearn.ensemble.HistGradientBoostingRegressor" title="sklearn.ensemble.HistGradientBoostingRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingRegressor</span></code></a> by parallelizing the initial search
+for bin thresholds.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28064">#28064</a> by <a class="reference external" href="https://github.com/lorentzenchr">Christian Lorentzen</a>.</p></li>
 <li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  The verbosity of <a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html#sklearn.ensemble.HistGradientBoostingClassifier" title="sklearn.ensemble.HistGradientBoostingClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingClassifier</span></code></a>
 and <a class="reference internal" href="../modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html#sklearn.ensemble.HistGradientBoostingRegressor" title="sklearn.ensemble.HistGradientBoostingRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.HistGradientBoostingRegressor</span></code></a> got a more granular control. Now,
@@ -816,9 +839,10 @@ during <a class="reference internal" href="../glossary.html#term-predict"><span 
 larger than 2000 using <code class="docutils literal notranslate"><span class="pre">joblib</span></code>.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28622">#28622</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a> and
 <a class="reference external" href="https://github.com/sergiormpereira">Sérgio Pereira</a>.</p></li>
-<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.ensemble.ExtraTreesClassifier.html#sklearn.ensemble.ExtraTreesClassifier" title="sklearn.ensemble.ExtraTreesClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.ExtraTreesClassifier</span></code></a> and <a class="reference internal" href="../modules/generated/sklearn.ensemble.ExtraTreesRegressor.html#sklearn.ensemble.ExtraTreesRegressor" title="sklearn.ensemble.ExtraTreesRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.ExtraTreesRegressor</span></code></a> now support
-missing-values in the data matrix <code class="docutils literal notranslate"><span class="pre">X</span></code>. Missing-values are handled by randomly moving all of
-the samples to the left, or right child node as the tree is traversed.
+<li><p><span class="raw-html"><span class="badge text-bg-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.ensemble.ExtraTreesClassifier.html#sklearn.ensemble.ExtraTreesClassifier" title="sklearn.ensemble.ExtraTreesClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.ExtraTreesClassifier</span></code></a> and
+<a class="reference internal" href="../modules/generated/sklearn.ensemble.ExtraTreesRegressor.html#sklearn.ensemble.ExtraTreesRegressor" title="sklearn.ensemble.ExtraTreesRegressor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ensemble.ExtraTreesRegressor</span></code></a> now support missing-values in the data matrix
+<code class="docutils literal notranslate"><span class="pre">X</span></code>. Missing-values are handled by randomly moving all of the samples to the left, or
+right child node as the tree is traversed.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/28268">#28268</a> by <a class="reference external" href="https://github.com/adam2392">Adam Li</a>.</p></li>
 </ul>
 </section>
@@ -873,7 +897,8 @@ is renamed into <code class="docutils literal notranslate"><span class="pre">ens
 <a class="reference internal" href="../modules/generated/sklearn.model_selection.FixedThresholdClassifier.html#sklearn.model_selection.FixedThresholdClassifier" title="sklearn.model_selection.FixedThresholdClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">model_selection.FixedThresholdClassifier</span></code></a> allowing the use of a pre-fitted
 estimator without re-fitting it.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29067">#29067</a> by <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</p></li>
-<li><p><span class="raw-html"><span class="badge text-bg-danger">Fix</span></span>  Improve error message when <a class="reference internal" href="../modules/generated/sklearn.model_selection.RepeatedStratifiedKFold.html#sklearn.model_selection.RepeatedStratifiedKFold.split" title="sklearn.model_selection.RepeatedStratifiedKFold.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">model_selection.RepeatedStratifiedKFold.split</span></code></a> is called without a <code class="docutils literal notranslate"><span class="pre">y</span></code> argument
+<li><p><span class="raw-html"><span class="badge text-bg-danger">Fix</span></span>  Improve error message when <a class="reference internal" href="../modules/generated/sklearn.model_selection.RepeatedStratifiedKFold.html#sklearn.model_selection.RepeatedStratifiedKFold.split" title="sklearn.model_selection.RepeatedStratifiedKFold.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">model_selection.RepeatedStratifiedKFold.split</span></code></a>
+is called without a <code class="docutils literal notranslate"><span class="pre">y</span></code> argument
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29402">#29402</a> by <a class="reference external" href="https://github.com/Anurag-Varma">Anurag Varma</a>.</p></li>
 </ul>
 </section>
@@ -914,6 +939,10 @@ traversed.
 <section id="sklearn-utils">
 <h4><a class="reference internal" href="../api/sklearn.utils.html#module-sklearn.utils" title="sklearn.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.utils</span></code></a><a class="headerlink" href="#sklearn-utils" title="Link to this heading">#</a></h4>
 <ul class="simple">
+<li><p><span class="raw-html"><span class="badge text-bg-info">Enhancement</span></span>  <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.validation.check_array</span></code> now accepts <code class="docutils literal notranslate"><span class="pre">ensure_non_negative</span></code>
+to check for negative values in the passed array, until now only available through
+calling <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.validation.check_non_negative</span></code>.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/29540">#29540</a> by <a class="reference external" href="https://github.com/tamaraatanasoska">Tamara Atanasoska</a>.</p></li>
 <li><p><span class="raw-html"><span class="badge text-bg-warning">API Change</span></span>  the <code class="docutils literal notranslate"><span class="pre">assert_all_finite</span></code> parameter of functions <a class="reference internal" href="../modules/generated/sklearn.utils.check_array.html#sklearn.utils.check_array" title="sklearn.utils.check_array"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.check_array</span></code></a>,
 <a class="reference internal" href="../modules/generated/sklearn.utils.check_X_y.html#sklearn.utils.check_X_y" title="sklearn.utils.check_X_y"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.check_X_y</span></code></a>, <a class="reference internal" href="../modules/generated/sklearn.utils.as_float_array.html#sklearn.utils.as_float_array" title="sklearn.utils.as_float_array"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.as_float_array</span></code></a> is renamed into
 <code class="docutils literal notranslate"><span class="pre">ensure_all_finite</span></code>. <code class="docutils literal notranslate"><span class="pre">force_all_finite</span></code> will be removed in 1.8.
@@ -988,6 +1017,7 @@ the project since version 1.5, including:</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-cluster"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.cluster</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-compose"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.compose</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.datasets</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-decomposition"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.decomposition</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-discriminant-analysis"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.discriminant_analysis</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-ensemble"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.ensemble</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sklearn-impute"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.impute</span></code></a></li>

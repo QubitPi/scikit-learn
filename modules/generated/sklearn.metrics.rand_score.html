@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/api.css?v=b0444f25" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/colors.css?v=cc94ab7d" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/custom.css?v=e4cb1417" />
@@ -1323,7 +1323,7 @@ document.write(`
 <h1>rand_score<a class="headerlink" href="#rand-score" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sklearn.metrics.rand_score">
-<span class="sig-prename descclassname"><span class="pre">sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">rand_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">labels_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_pred</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/7eacdef/sklearn/metrics/cluster/_supervised.py#L261"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.metrics.rand_score" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">rand_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">labels_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_pred</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/02e45ce/sklearn/metrics/cluster/_supervised.py#L261"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.metrics.rand_score" title="Link to this definition">#</a></dt>
 <dd><p>Rand index.</p>
 <p>The Rand Index computes a similarity measure between two clusterings
 by considering all pairs of samples and counting pairs that are
@@ -1386,7 +1386,7 @@ Journal of Classification 2, 193–218 (1985).</a>.</p>
 <p>Labelings that assign all classes members to the same clusters
 are complete but may not always be pure, hence penalized:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rand_score</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="go">0.83...</span>
+<span class="go">np.float64(0.83...)</span>
 </pre></div>
 </div>
 </dd></dl>
