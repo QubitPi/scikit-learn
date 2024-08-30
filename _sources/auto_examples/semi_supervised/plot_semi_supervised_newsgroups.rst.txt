@@ -187,7 +187,7 @@ loader or setting them to `None` to get all 20 of them.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 6.634 seconds)
+   **Total running time of the script:** (0 minutes 6.517 seconds)
 
 
 .. _sphx_glr_download_auto_examples_semi_supervised_plot_semi_supervised_newsgroups.py:

@@ -171,7 +171,7 @@ We now plot heatmaps for both search estimators.
 
 
 .. image-sg:: /auto_examples/model_selection/images/sphx_glr_plot_successive_halving_heatmap_001.png
-   :alt: Successive Halving time = 1.270s, GridSearch time = 4.349s
+   :alt: Successive Halving time = 1.269s, GridSearch time = 4.350s
    :srcset: /auto_examples/model_selection/images/sphx_glr_plot_successive_halving_heatmap_001.png
    :class: sphx-glr-single-img
 

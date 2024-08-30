@@ -104,7 +104,7 @@ details of the training data and learn from the noise, i.e. they overfit.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.204 seconds)
+   **Total running time of the script:** (0 minutes 0.202 seconds)
 
 
 .. _sphx_glr_download_auto_examples_tree_plot_tree_regression_multioutput.py:
